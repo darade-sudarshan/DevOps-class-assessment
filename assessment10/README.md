@@ -1,8 +1,10 @@
 
-                                                           Project Overview
+                           Project Overview
 
 Participants are required to deploy a simple static web application on a Kubernetes cluster using Minikube, set up advanced ingress networking with URL rewriting and sticky sessions, and configure horizontal pod autoscaling to manage traffic efficiently. The project will be divided into stages, with each stage focusing on specific aspects of Kubernetes ingress, URL rewriting, sticky sessions, and autoscaling.
+
 Requirements and Deliverables
+
 Stage 1: Setting Up the Kubernetes Cluster and Static Web App
     1 Set Up Minikube:
         ◦ Ensure Minikube is installed and running on the local Ubuntu machine.
@@ -26,7 +28,9 @@ Deliverables:
     • Docker image URL
     • Kubernetes deployment and service YAML files
     
+    
 Stage 2: Configuring Ingress Networking
+    
     4 Install and Configure Ingress Controller:
         ◦ Install an ingress controller (e.g., Nginx Ingress Controller) in the Minikube cluster.
         ◦ Verify the ingress controller is running and accessible.
@@ -45,6 +49,7 @@ Stage 2: Configuring Ingress Networking
 Deliverables:
     • Ingress controller installation commands/scripts
     • Ingress resource YAML file with advanced routing, TLS configuration, URL rewriting, and sticky sessions
+    
 Stage 3: Implementing Horizontal Pod Autoscaling
     6 Configure Horizontal Pod Autoscaler:
         ◦ Write a horizontal pod autoscaler (HPA) manifest to automatically scale the static web application pods based on CPU utilization.
@@ -66,6 +71,7 @@ Stage 4: Final Validation and Cleanup
 
         ◦ Verify the application's availability and performance during different load conditions.
 
+       
 Stress test result for frontend deployments : 
 
 ![alt text](img/image10.png)
@@ -80,6 +86,13 @@ Rusults after cool Down Periods:
 ![alt text](img/image12.png)
        9.Cleanup:
         ◦ Provide commands or scripts to clean up the Kubernetes resources created during the project (deployments, services, ingress, HPA).
+
+        kubectl delete deployment frontend
+        kubectl delete deployment backend
+        kubectl delete deployment frontend-service
+        kubectl delete deployment backend-service
+        kubectl delete hpa backend
+        kubectl delete hpa frontend
 Deliverables:
     • Final validation report documenting the testing process and results
     • Cleanup commands/scripts
