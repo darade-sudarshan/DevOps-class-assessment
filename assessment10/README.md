@@ -6,7 +6,8 @@ Stage 1: Setting Up the Kubernetes Cluster and Static Web App
     1 Set Up Minikube:
         ◦ Ensure Minikube is installed and running on the local Ubuntu machine.
         ◦ Verify the Kubernetes cluster is functioning correctly.
-          
+          ![image](https://github.com/user-attachments/assets/ad735fbd-ec30-4bda-83a5-0bcdb739a4ab)
+
     2 Deploy Static Web App:
         ◦ Create a Dockerfile for a simple static web application (e.g., an HTML page served by Nginx).
 
