@@ -1,0 +1,102 @@
+=================================
+Jul 22 10:00:39 PUNELPT0728 /usr/lib/gdm3/gdm-x-session[2371]: #011(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+Jul 22 10:00:41 PUNELPT0728 gnome-session[2455]: gnome-session-binary[2455]: WARNING: Falling back to non-systemd startup procedure due to error: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+Jul 22 10:00:41 PUNELPT0728 gnome-session-binary[2455]: WARNING: Falling back to non-systemd startup procedure due to error: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+Jul 22 10:00:42 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 10:00:42 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 10:00:44 PUNELPT0728 gnome-shell[2484]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+Jul 22 10:00:44 PUNELPT0728 gsd-sharing[2804]: Failed to StopUnit service: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+Jul 22 10:00:44 PUNELPT0728 gsd-sharing[2804]: message repeated 3 times: [ Failed to StopUnit service: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1]
+Jul 22 10:01:12 PUNELPT0728 /usr/lib/gdm3/gdm-x-session[2987]: #011(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+Jul 22 10:01:13 PUNELPT0728 gnome-session-c[3094]: Error creating FIFO: File exists
+Jul 22 10:01:15 PUNELPT0728 gnome-shell[3115]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+Jul 22 10:01:19 PUNELPT0728 snap-store[3418]: not handling error not-supported for action refresh: failed to download file: SSL: no alternative certificate subject name matches target host name 'cdn.fwupd.org'
+Jul 22 10:01:21 PUNELPT0728 snap-store[3418]: not handling error download-failed for action refresh: E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?)#012E: The repository 'http://in.archive.ubuntu.com/ubuntu focal-updates InRelease' is no longer signed.#012W: Updating from such a repository can't be done securely, and is therefore disabled by default.#012W: See apt-secure(8) manpage for repository creation and user configuration details.#012E: http://in.archive.ubuntu.com/ubuntu focal-updates InRelease is not (yet) available (Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?))#012E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?)#012E: The repository 'http://in.archive.ubuntu.com/ubuntu focal-backports InRelease' is no longer signed.#012W: Updating from such a repository can't be done securely, and is therefore disabled by default.#012W: See apt-secure(8) manpage for repository creation and user configuration details.#012E: http://in.archive.ubuntu.com/ubuntu focal-backports InRelease is not (yet) available (Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?))
+Jul 22 10:01:21 PUNELPT0728 snap-store[3418]: not handling error failed for action get-popular: status-code=500 kind=(null) message=Get "https://api.snapcraft.io/v2/snaps/find?architecture=amd64&category=featured&confinement=strict%2Cclassic&fields=base%2Cconfinement%2Clinks%2Ccontact%2Cdescription%2Cdownload%2Clicense%2Cprices%2Cprivate%2Cpublisher%2Crevision%2Csummary%2Ctitle%2Ctype%2Cversion%2Cwebsite%2Cstore-url%2Cmedia%2Ccommon-ids%2Ccategories%2Cchannel": x509: certificate is valid for captiveportal-login.aruba.arrow.com, not api.snapcraft.io
+Jul 22 10:01:21 PUNELPT0728 snap-store[3418]: not handling error failed for action get-featured: status-code=500 kind=(null) message=Get "https://api.snapcraft.io/v2/snaps/find?architecture=amd64&category=featured&confinement=strict%2Cclassic&fields=base%2Cconfinement%2Clinks%2Ccontact%2Cdescription%2Cdownload%2Clicense%2Cprices%2Cprivate%2Cpublisher%2Crevision%2Csummary%2Ctitle%2Ctype%2Cversion%2Cwebsite%2Cstore-url%2Cmedia%2Ccommon-ids%2Ccategories%2Cchannel": x509: certificate is valid for captiveportal-login.aruba.arrow.com, not api.snapcraft.io
+Jul 22 10:01:21 PUNELPT0728 snap-store[3418]: not GsPlugin error snapd-error-quark:10: status-code=500 kind=(null) message=Get "https://api.snapcraft.io/api/v1/snaps/sections": x509: certificate is valid for captiveportal-login.aruba.arrow.com, not api.snapcraft.io
+Jul 22 10:01:21 PUNELPT0728 snap-store[3418]: not handling error failed for action get-categories: status-code=500 kind=(null) message=Get "https://api.snapcraft.io/api/v1/snaps/sections": x509: certificate is valid for captiveportal-login.aruba.arrow.com, not api.snapcraft.io
+Jul 22 10:01:23 PUNELPT0728 snap-store[3418]: not handling error failed for action refresh: E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/dists/focal/InRelease  #012E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  #012E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  #012E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  #012E: Failed to fetch http://ppa.launchpad.net/ansible/ansible/ubuntu/dists/focal/InRelease  #012E: Failed to fetch https://download.docker.com/linux/ubuntu/dists/focal/InRelease  #012E: Failed to fetch https://dl.google.com/linux/chrome/deb/dists/stable/InRelease  #012E: Failed to fetch https://apt.releases.hashicorp.com/dists/focal/InRelease  #012E: Failed to fetch https://downloads.k8slens.dev/apt/debian/dists/stable/InRelease  #012E: Failed to fetch https://packages.microsoft.com/ubuntu/20.04/prod/dists/focal/InRelease  #012E: Failed to fetch https://deb.nodesource.com/node_20.x/dists/nodistro/InRelease  #012E: Some index files failed to download. They have been ignored, or old ones used instead.
+Jul 22 10:02:09 PUNELPT0728 gnome-shell[3916]: [3910:3910:0722/100209.067169:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.ScreenSaver.GetActive: object_path= /org/freedesktop/ScreenSaver: org.freedesktop.DBus.Error.NotSupported: This method is not implemented
+Jul 22 10:02:22 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 10:02:45 PUNELPT0728 gnome-shell[3115]: Received error from D-Bus search provider org.gnome.seahorse.Application.desktop during GetResultMetas: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.gnome.Shell.SearchProvider2” on object at path /org/gnome/seahorse/Application
+Jul 22 10:04:21 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100421.262479:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -118
+Jul 22 10:04:21 PUNELPT0728 gnome-shell[3916]: [3910:3910:0722/100421.726142:ERROR:atom_cache.cc(229)] Add WM_CHANGE_STATE to kAtomsToCache
+Jul 22 10:06:02 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100602.605491:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:06:05 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100605.624659:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:06:26 PUNELPT0728 gnome-shell[3916]: [3959:3964:0722/100626.027608:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -100
+Jul 22 10:06:52 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100652.614704:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:06:58 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100658.180396:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:07:36 PUNELPT0728 geoclue[2761]: Failed to query location: Error resolving “location.services.mozilla.com”: Temporary failure in name resolution
+Jul 22 10:07:44 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100744.782573:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:07:50 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100750.334990:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:07:50 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 10:08:35 PUNELPT0728 gnome-shell[3916]: [3910:3937:0722/100835.518136:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22 10:08:44 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 10:47:17 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 10:47:17 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 10:47:19 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 10:47:19 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 10:47:19 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 10:47:20 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 10:48:15 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 10:48:15 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 10:48:17 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 10:48:18 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 11:05:49 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 11:40:06 PUNELPT0728 gnome-shell[3916]: [3910:3910:0722/114006.580706:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot destructure property 'enabled' of 'undefined' as it is undefined.
+Jul 22 11:40:06 PUNELPT0728 gnome-shell[3916]: [3910:3910:0722/114006.580725:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.", source: https://ogs.google.com/u/0/widget/app?awwd=1&gm3=1&origin=chrome-untrusted%3A%2F%2Fnew-tab-page&origin=chrome%3A%2F%2Fnew-tab-page&cn=app&pid=1&spid=243&hl=en-GB&dm= (0)
+Jul 22 11:46:35 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 11:46:36 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 11:46:36 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 11:46:36 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 11:46:37 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 11:46:37 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 11:55:35 PUNELPT0728 kernel: [ 6902.985274] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 11:55:35 PUNELPT0728 kernel: [ 6902.985323] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 11:55:35 PUNELPT0728 kernel: [ 6902.985347] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 11:55:35 PUNELPT0728 kernel: [ 6902.985368] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:00:18 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 12:07:19 PUNELPT0728 kernel: [ 7606.979667] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:07:19 PUNELPT0728 kernel: [ 7606.979718] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:07:19 PUNELPT0728 kernel: [ 7606.979742] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:07:19 PUNELPT0728 kernel: [ 7606.979763] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:08:05 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:08:05 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:08:05 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:08:05 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:08 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:08 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:08 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:08 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:09 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:09 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:09 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:09 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:19 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:19 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:20 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:20 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:10:20 PUNELPT0728 systemd[1]: Starting Process error reports when automatic reporting is enabled...
+Jul 22 12:10:20 PUNELPT0728 systemd[1]: Finished Process error reports when automatic reporting is enabled.
+Jul 22 12:11:01 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 12:13:01 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+Jul 22 12:20:08 PUNELPT0728 kernel: [ 8375.979747] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:20:08 PUNELPT0728 kernel: [ 8375.979800] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:20:08 PUNELPT0728 kernel: [ 8375.979824] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:20:08 PUNELPT0728 kernel: [ 8375.979847] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 12:49:25 PUNELPT0728 gnome-shell[3916]: [3910:3910:0722/124925.996929:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot destructure property 'enabled' of 'undefined' as it is undefined.
+Jul 22 12:49:26 PUNELPT0728 gnome-shell[3916]: [3910:3910:0722/124925.996978:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.", source: https://ogs.google.com/u/0/widget/app?awwd=1&gm3=1&origin=chrome-untrusted%3A%2F%2Fnew-tab-page&origin=chrome%3A%2F%2Fnew-tab-page&cn=app&pid=1&spid=243&hl=en-GB&dm= (0)
+Jul 22 13:05:19 PUNELPT0728 kernel: [11086.975965] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:05:19 PUNELPT0728 kernel: [11086.976019] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:05:19 PUNELPT0728 kernel: [11086.976044] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:05:19 PUNELPT0728 kernel: [11086.976066] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:51:16 PUNELPT0728 kernel: [13844.005701] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:51:16 PUNELPT0728 kernel: [13844.005748] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:51:16 PUNELPT0728 kernel: [13844.005771] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:51:16 PUNELPT0728 kernel: [13844.005791] [drm:nv_drm_master_set [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to grab modeset ownership
+Jul 22 13:59:25 PUNELPT0728 gnome-shell[3916]: Fontconfig error: Cannot load default config file: No such file: (null)
+
+
+
+
