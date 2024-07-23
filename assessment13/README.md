@@ -1,4 +1,4 @@
-                                                                                                         Project Overview
+                             Project Overview
 
 1. create a pipeline to fetch code from private repository and configure secret for git repository.
 2. setup a freestyle pipeline to compile and test the java code using maven.
@@ -34,7 +34,7 @@
 ![alt text](img/image-6.png)
 
 
-    h. Manually started the build and it succedded along with testing pipeline.
+    h. Manually started the build and it succeeded along with testing pipeline.
 
 ![alt text](img/image-4.png)
 
