@@ -24,7 +24,7 @@ OUTPUT_FILE="log_summary.txt"
 #Define the output file for  error summaries
 ERROR_FILE="error_summary.txt"
 #Define the output file for  alert summaries
-ALERT_FILE="alert_summary.txt"
+ALERT_FILE="alert_summary.txt"  
 #Define the output file for  critical errors summaries
 CRITICAL_FILE="critical_summary.txt"
 #Define the output file for  Emergency summaries
