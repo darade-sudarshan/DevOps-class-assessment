@@ -38,6 +38,11 @@
 
 ![alt text](img/image-4.png)
 
+    i. create dashboard view for build pipeline
 
+![alt text](img/image-7.png)
 
+    j. Custom pipiline dashboard view
+
+![alt text](img/image-8.png)
     
