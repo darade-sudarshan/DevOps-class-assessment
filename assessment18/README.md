@@ -62,11 +62,16 @@ Deliverables:
 Playbook Creation:
 Write a playbook to install a specific package on all managed nodes.
 
+[app-install.yml](app-install.yml)
+
 Create a playbook to configure a service with specific parameters.
+
+[apache2-service-config.yml](apache2-service-config.yml)
 
 Develop a playbook to manage files, such as creating, deleting, and 
 modifying files on managed nodes.
 
+[file-modification.yml](file-modification.yml)
 
 
 Testing and Verification:
@@ -90,7 +95,7 @@ Playbook with Error Handling:
 Write a playbook that includes tasks likely to fail, such as starting a non-existent service or accessing a non-existent file.
 Implement error handling strategies using modules like block, rescue, and always.
 
-
+[text](user-creation-with-block-rescue.yml)
 
 Logging and Notifications:
 
