@@ -15,9 +15,6 @@ Managed Nodes Configuration:
 Ensure all managed nodes are properly configured to be controlled by Ansible.
 Verify connectivity and proper setup between the control node and managed nodes.
 ![alt text](img/image-2.png)
-Documentation:
-Detailed installation and configuration steps.
-Troubleshooting guide for common issues encountered during deployment.
 
 Project 2: Ad-Hoc Ansible Commands
 =======
@@ -35,10 +32,6 @@ Update all packages on a subset of managed nodes.
 
 ![alt text](img/image-6.png)
 
-Documentation:
-
-Provide a comprehensive guide on using Ansible ad-hoc commands.
-Include examples of common administrative tasks that can be performed with ad-hoc commands.
 
 Project 3: Working with Ansible Inventories
 =========
@@ -59,9 +52,6 @@ Implement a dynamic inventory script or use a dynamic inventory plugin.
 
 Configure the dynamic inventory to categorize servers automatically based on predefined criteria.
 
-Documentation:
-Instructions for setting up and using static and dynamic inventories.
-Examples of playbooks utilizing both types of inventories.
 
 Project 4: Ansible Playbooks: The Basics
 ========
@@ -71,24 +61,23 @@ Deliverables:
 
 Playbook Creation:
 Write a playbook to install a specific package on all managed nodes.
-![alt text](img/image-7.png)
+
 Create a playbook to configure a service with specific parameters.
-![alt text](img/image-8.png)
+
 Develop a playbook to manage files, such as creating, deleting, and 
 modifying files on managed nodes.
 
-![alt text](img/image-9.png)
+
 
 Testing and Verification:
 
 Test the playbooks to ensure they run successfully and perform the intended tasks.
-
+![alt text](img/image-7.png)
 Validate the changes made by the playbooks on the managed nodes.
 Documentation:
-
+![alt text](img/image-8.png)
 Detailed explanation of each playbook, including the tasks and modules used.
-
-Guide on how to run the playbooks and interpret the results.
+![alt text](img/image-9.png)
 
 Project 5: Ansible Playbooks - Error Handling
 ====
@@ -113,8 +102,4 @@ Configure the playbook to log errors and notify administrators of any issues enc
 
 Use Ansible modules to send notifications via email or other 
 communication channels.
-
-Documentation:
-Comprehensive guide on error handling in Ansible playbooks, including examples of common scenarios and solutions.
-Detailed instructions on setting up logging and notifications for error handling.
 
