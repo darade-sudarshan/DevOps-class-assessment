@@ -44,16 +44,6 @@ Deploys a container using the pushed image.
 DockerHub Repository: A DockerHub repository where the Docker images will be stored.
 
 ![alt text](img/image-8.png)
-Jenkins Setup:
-Jenkins installed and configured on a local Ubuntu machine.
 
-Required plugins installed (e.g., Git, Docker, Pipeline).
 
-Documentation: Detailed documentation explaining:
-
-How to set up the local Jenkins environment.
-
-Configuration steps for the pipeline.
-
-Instructions for verifying the deployment.
 
