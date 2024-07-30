@@ -1,0 +1,46 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - block:
+        - name: Ensure the user is created
+          user:
+            name: ansible
+            state: present
+          register: user_result
+          failed_when: user_result.failed
+
+        - name: Set a password for the user
+          user:
+            name: ansible
+            password: "{{ 'ansible' | password_hash('sha512') }}"
+          register: password_result
+          failed_when: password_result.failed
+
+        - name: Add the user to a group
+          user:
+            name: ansible
+            groups: "sudo"
+            append: yes
+          register: group_result
+          failed_when: group_result.failed
+
+      rescue:
+        - name: Print a message if user creation fails
+          debug:
+            msg: "Failed to create the user or set the password."
+
+        - name: Ensure the user is absent if any step fails
+          user:
+            name: ansible
+            state: absent
+
+      always:
+        - name: Check if the user exists
+          command: id ansible
+          register: id_result
+          ignore_errors: yes
+
+        - name: Print user creation status
+          debug:
+            msg: "User creation {{ 'succeeded' if id_result.rc == 0 else 'failed' }}."
