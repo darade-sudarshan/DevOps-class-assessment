@@ -95,7 +95,7 @@ Playbook with Error Handling:
 Write a playbook that includes tasks likely to fail, such as starting a non-existent service or accessing a non-existent file.
 Implement error handling strategies using modules like block, rescue, and always.
 
-[text](user-creation-with-block-rescue.yml)
+[user-creation-with-block-rescue.yml](user-creation-with-block-rescue.yml)
 
 Logging and Notifications:
 
