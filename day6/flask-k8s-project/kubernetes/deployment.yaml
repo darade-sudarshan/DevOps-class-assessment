@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: flask-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: webapp
+      app: flask-app
   template:
     metadata:
       labels:
-        app: webapp
+        app: flask-app
     spec:
       containers:
-      - name: webapp
-        image: nginx
+      - name: flask-app
+        image: flask-k8s-app:v2
         ports:
-        - containerPort: 80
+        - containerPort: 5000
