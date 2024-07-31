@@ -1,6 +1,5 @@
-Comprehensive Linux Operations
 
-Project Overview
+                                            Project Overview
 
 This project spans various aspects of Linux system administration, including file management, user and group management, service control, process handling, and more. You will be completing tasks that simulate real-world scenarios, providing hands-on experience with Linux commands and configurations.
 
