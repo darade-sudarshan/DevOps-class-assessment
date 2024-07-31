@@ -1,49 +1,80 @@
-                                            Project 01
-Problem Statement:
+                                                Project Problem Statement
 
-You are tasked with setting up a CI/CD pipeline using Jenkins to streamline the deployment process of a simple Java application. The pipeline should accomplish the following tasks:
+A development team needs to establish a basic CI/CD pipeline for a web application. The goal is to automate version control, containerization, building, testing, and deployment processes.
+Deliverables
 
-Fetch the Dockerfile: The pipeline should clone a GitHub repository containing the source code of the Java application and a Dockerfile.
+Git Repository:
 
-Create a Docker Image: The pipeline should build a Docker image from the fetched Dockerfile.
+Create a Git repository: Initialize a new repository for the web application.
+![alt text](image.png)
 
-Push the Docker Image: The pipeline should push the created Docker image to a specified DockerHub repository.
+Branching Strategy:
 
-Deploy the Container: The pipeline should deploy a container using the pushed Docker image.
-
-Deliverables:
-GitHub Repository: A GitHub repository containing:
-
-The source code of a simple Java application.
-
-![alt text](img/image-1.png)
-
-A Dockerfile for building the Docker image.
-
-![alt text](img/image-2.png)
-
-Jenkins Pipeline Script: A Jenkinsfile (pipeline script) that:
-
-
-
-Clones the GitHub repository.
-
-
-Builds the Docker image.
+Set up main and develop branches.
 
 ![alt text](img/image-3.png)
 
-Pushes the Docker image to DockerHub.
+Create a feature branch for a new feature or bug fix.
+
+![alt text](img/image-2.png)
+
+Add Configuration Files:
+Create a .gitignore file to exclude files like logs, temporary files, etc.
+
+Create a README.md file with a project description, setup instructions, and contribution guidelines.
+
+Docker Configuration:
+Dockerfile:
+
+Write a Dockerfile to define how to build the Docker image for the web application.
+
+![alt text](img/image-4.png)
+
+Docker Ignore File:
+
+Create a .dockerignore file to exclude files and directories from the Docker build context.
+
+Image Management:
+
+Build a Docker image using the Dockerfile.
+![alt text](img/image-5.png)
+Push the built Docker image to a container registry (e.g., Docker Hub).
+
+Jenkins Configuration:
+
+Jenkins Job Setup:
 
 ![alt text](img/image-6.png)
 
-Deploys a container using the pushed image.
+Create a Jenkins job to pull code from the Git repository.
 
 ![alt text](img/image-7.png)
 
-DockerHub Repository: A DockerHub repository where the Docker images will be stored.
+Configure Jenkins to build the Docker image using the Dockerfile.
 
 ![alt text](img/image-8.png)
 
+Set up Jenkins to run tests on the Docker image.
 
+![alt text](img/image-9.png)
 
+Configure Jenkins to push the Docker image to the container registry after a successful build.
+
+Jenkins Pipeline:
+
+Create a Jenkinsfile to define the CI/CD pipeline stages, including build, test, and deploy.
+
+Ansible Playbook:
+
+Basic Playbook Creation:
+
+Develop an Ansible playbook to automate the deployment of the Docker container.
+
+Playbook Tasks:
+Install Docker on the target server (if Docker is not already installed).
+![alt text](img/image-10.png)
+Pull the Docker image from the container registry.
+Run the Docker container with the required configurations.
+
+Inventory File:
+Create an inventory file specifying the target server(s) for deployment.

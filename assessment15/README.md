@@ -1,46 +1,49 @@
-                        Multi-Branch Project
-                        
-                        Project Overview
+                                            Project 01
+Problem Statement:
 
-Create a simple Java Maven project.
+You are tasked with setting up a CI/CD pipeline using Jenkins to streamline the deployment process of a simple Java application. The pipeline should accomplish the following tasks:
 
+Fetch the Dockerfile: The pipeline should clone a GitHub repository containing the source code of the Java application and a Dockerfile.
 
-Version-control the project using Git with multiple branches.
+Create a Docker Image: The pipeline should build a Docker image from the fetched Dockerfile.
 
+Push the Docker Image: The pipeline should push the created Docker image to a specified DockerHub repository.
 
-Set up Jenkins multi-branch pipeline for automated build and deployment.
+Deploy the Container: The pipeline should deploy a container using the pushed Docker image.
 
+Deliverables:
+GitHub Repository: A GitHub repository containing:
 
-Utilize Jenkins environment variables in the Jenkinsfile.
+The source code of a simple Java application.
 
-
-Project Objectives
-Version-control using Git.
-Jenkins multi-branch pipeline setup.
-Environment variable management using Jenkinsfile.
-
-
-Project Deliverables
-
-Git Repository:
-Local Git repository initialized.
 ![alt text](img/image-1.png)
-Branches: development, staging, and production.
-![alt text](img/image-2.png)
-Repository pushed to remote Git server (e.g., GitHub, GitLab, Bitbucket).
-![alt text](img/image-4.png)
-Maven Project:
 
-Simple Java Maven project created (HelloWorld application).
-![alt text](img/image-7.png)
-pom.xml with dependencies and build configurations.
-![alt text](img/image-8.png)
-Jenkins Setup:
-Multi-branch pipeline job configured in Jenkins.
+A Dockerfile for building the Docker image.
+
+![alt text](img/image-2.png)
+
+Jenkins Pipeline Script: A Jenkinsfile (pipeline script) that:
+
+
+
+Clones the GitHub repository.
+
+
+Builds the Docker image.
+
 ![alt text](img/image-3.png)
-Jenkinsfile defining build and deployment steps.
-![alt text](img/image-5.png)
-Environment variables managed using Jenkins environment variable settings.
+
+Pushes the Docker image to DockerHub.
+
 ![alt text](img/image-6.png)
 
-![alt text](img/image-9.png)
+Deploys a container using the pushed image.
+
+![alt text](img/image-7.png)
+
+DockerHub Repository: A DockerHub repository where the Docker images will be stored.
+
+![alt text](img/image-8.png)
+
+
+

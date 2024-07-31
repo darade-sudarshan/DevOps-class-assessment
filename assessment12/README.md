@@ -1,47 +1,48 @@
-                                                                                    Jenkin Project
-Project Overview.
+                             Project Overview
 
-1. Perform installation of Jenkins Locally and configure it.
+1. create a pipeline to fetch code from private repository and configure secret for git repository.
+2. setup a freestyle pipeline to compile and test the java code using maven.
 
-before installing jenkins we must install latest openJDK available for your Distro.
+
+    a. setup pileline for compilation of java build.
+
 ![alt text](img/image.png)
 
-then add apt repository and perform installation using following commands.
+    b. configure private Repo along with github credentials
 
 ![alt text](img/image-1.png)
 
-post installation jenkin will run on port 8080 on your localhost.
-to access Jenkins open Browser and enter URL. http://localhost:8080/
+    c. add build step for compilation of java project from POM file.
+
+![alt text](img/image5.png)
+    
+    
+    d.setup a pipeline for testing of java build.
 
 ![alt text](img/image-2.png)
 
-The command: sudo cat /var/lib/jenkins/secrets/initialAdminPassword will print the password at console.
+    e. configure private Repo along with github credentials
 
-post unlocking jenkin create a user account to use jenkin or you can use admin account as well.
+![alt text](img/image-1.png)
 
-2. Run a sample java build using free style project.
+    f. add post build trigger for initiating testing of java project
 
-    a. create a simple free stype project 
+![alt text](img/image-3.png)
 
-![alt text](img/image-%203.png)
-
-    b. add description for Project pipeline.
-![alt text](img/image-4.png)
-
-    c. enter SCM details for fetching and building code.
-    Note: choose correct branch name to be fetched and build from SCM.
-
-![alt text](img/image-5.png)
-
-    d. we have to trigger the build after every 5 minutes
+    g. add test step for compilation of java project from POM file.
 
 ![alt text](img/image-6.png)
 
-    e. provide Build command in excute shell in build steps to build Java code.
+
+    h. Manually started the build and it succeeded along with testing pipeline.
+
+![alt text](img/image-4.png)
+
+    i. create dashboard view for build pipeline
+
+![alt text](img/image-7.png)
+
+    j. Custom pipiline dashboard view
 
 ![alt text](img/image-8.png)
     
-    
-    f. building is scheduled to buid after every 5 minutes.
-
-![alt text](img/image-7.png)

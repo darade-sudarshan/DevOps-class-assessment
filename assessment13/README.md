@@ -1,48 +1,60 @@
-                             Project Overview
+                               Project Overview
+Your organization is implementing continuous integration (CI) practices to streamline the software development lifecycle. As part of this initiative, you will create a Jenkins declarative pipeline for building a simple Maven project hosted on GitHub. This project aims to automate the build process, ensure code quality, and facilitate continuous delivery (CD).
 
-1. create a pipeline to fetch code from private repository and configure secret for git repository.
-2. setup a freestyle pipeline to compile and test the java code using maven.
+                                Objectives
+Create a Jenkins pipeline script using declarative syntax.
 
+Clone a Maven project from a specified GitHub repository.
 
-    a. setup pileline for compilation of java build.
+Execute the build process and run unit tests.
 
-![alt text](img/image.png)
+Archive build artifacts.
 
-    b. configure private Repo along with github credentials
+Provide clear feedback on build status through Jenkins' UI and console output.
 
-![alt text](img/image-1.png)
+                            Instructions
+1. Setup Jenkins Job
 
-    c. add build step for compilation of java project from POM file.
-
-![alt text](img/image5.png)
-    
-    
-    d.setup a pipeline for testing of java build.
-
-![alt text](img/image-2.png)
-
-    e. configure private Repo along with github credentials
-
-![alt text](img/image-1.png)
-
-    f. add post build trigger for initiating testing of java project
+    a. Create a new Jenkins pipeline job.
 
 ![alt text](img/image-3.png)
 
-    g. add test step for compilation of java project from POM file.
-
-![alt text](img/image-6.png)
-
-
-    h. Manually started the build and it succeeded along with testing pipeline.
+Configure the job to pull the Jenkinsfile from the GitHub repository.
 
 ![alt text](img/image-4.png)
 
-    i. create dashboard view for build pipeline
+Create Jenkinsfile
+
+![alt text](img/image-1.png)
+
+Write a declarative pipeline script (Jenkinsfile) that includes the following stages:
+
+Clone Repository: Clone the Maven project from the GitHub repository.
+
+![alt text](/img/image-2.png)
+
+Build: Execute the Maven build process (mvn clean install).
+
+![alt text](img/image-5.png)
+
+Test: Run unit tests as part of the Maven build.
+![alt text](img/image-6.png)
+
+
+Ensure the pipeline can be easily modified for different build configurations.
+
+Run the Pipeline
+Trigger the Jenkins pipeline job manually or set up a webhook for automatic triggering on GitHub repository changes.
+Monitor the build process through Jenkins' UI and console output.
 
 ![alt text](img/image-7.png)
 
-    j. Custom pipiline dashboard view
-
 ![alt text](img/image-8.png)
-    
+
+Deliverables
+Jenkinsfile: A declarative pipeline script with the defined stages and steps.
+Jenkins Job Configuration: Configured Jenkins job that uses the Jenkinsfile from the GitHub repository.
+Build Artifacts: Successfully built and archived artifacts stored in Jenkins.
+Build Reports: Output of the build process, including unit test results, displayed in Jenkins.
+Pipeline Visualization: Visual representation of the pipeline stages and steps in Jenkins, showing the flow and status of each build stage.
+Documentation: Detailed documentation outlining the pipeline setup process, including prerequisites, configuration steps, and instructions for modifying the pipeline.
