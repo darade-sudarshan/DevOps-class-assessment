@@ -43,3 +43,5 @@ Content: Static or basic dynamic content served by the web application.
 assessing Website from localhost
 
 ![day17/Project02/img/image2.png](img/image2.png)
+
+![alt text](img/image.png)
