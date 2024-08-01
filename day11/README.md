@@ -1,9 +1,11 @@
-                                                                                    Jenkin Project
+                               Jenkin Project
+
 Project Overview.
 
 1. Perform installation of Jenkins Locally and configure it.
 
 before installing jenkins we must install latest openJDK available for your Distro.
+
 ![alt text](img/image.png)
 
 then add apt repository and perform installation using following commands.
@@ -15,7 +17,9 @@ to access Jenkins open Browser and enter URL. http://localhost:8080/
 
 ![alt text](img/image-2.png)
 
-The command: sudo cat /var/lib/jenkins/secrets/initialAdminPassword will print the password at console.
+The command given below will print the password at console.
+
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
 
 post unlocking jenkin create a user account to use jenkin or you can use admin account as well.
 
@@ -23,9 +27,10 @@ post unlocking jenkin create a user account to use jenkin or you can use admin a
 
     a. create a simple free stype project 
 
-![alt text](img/image-%203.png)
+![alt text](img/image-3.png)
 
     b. add description for Project pipeline.
+    
 ![alt text](img/image-4.png)
 
     c. enter SCM details for fetching and building code.
