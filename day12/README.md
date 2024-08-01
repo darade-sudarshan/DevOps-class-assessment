@@ -1,6 +1,7 @@
                              Project Overview
 
 1. create a pipeline to fetch code from private repository and configure secret for git repository.
+
 2. setup a freestyle pipeline to compile and test the java code using maven.
 
 
