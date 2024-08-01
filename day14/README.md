@@ -12,6 +12,7 @@ Push the Docker Image: The pipeline should push the created Docker image to a sp
 Deploy the Container: The pipeline should deploy a container using the pushed Docker image.
 
 Deliverables:
+
 GitHub Repository: A GitHub repository containing:
 
 The source code of a simple Java application.
@@ -25,9 +26,7 @@ A Dockerfile for building the Docker image.
 Jenkins Pipeline Script: A Jenkinsfile (pipeline script) that:
 
 
-
 Clones the GitHub repository.
-
 
 Builds the Docker image.
 
