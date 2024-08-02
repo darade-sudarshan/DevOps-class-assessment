@@ -2,10 +2,10 @@
 - hosts: all
   become: yes
   vars:
-    mysql_root_password: "passw0rd"
-    mysql_db_name: "database"
-    mysql_user: "appuser"
-    mysql_user_password: "appuser@123"
+  mysql_root_password: "my_root_password" # modify password for your root database account
+  mysql_db_name: "database"
+  mysql_user: "appuser"
+  mysql_user_password: "my_password" # modify password for your database
 
   tasks:
     - name: Installing Mysql  and dependencies
