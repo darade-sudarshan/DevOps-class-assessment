@@ -1,0 +1,6 @@
+---
+# vars file for roles/Mysql
+mysql_root_password: "dbrootpassword" 
+mysql_db_name: "database"
+mysql_user: "appuser"
+mysql_user_password: "dbuserpassword"  

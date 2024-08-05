@@ -1,0 +1,7 @@
+---
+# handlers file for roles/Nginx
+- name: Reload NGINX
+  service:
+    name: "{{ nginx_service }}"
+    state: reloaded
+  become: yes
