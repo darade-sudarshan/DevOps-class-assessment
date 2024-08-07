@@ -61,6 +61,7 @@ Create a .gitignore file to exclude unnecessary files.
 
 Commit and push initial codebase to a remote repository.
 
+![alt text](img/image2.png)
 Deliverables:
 
 Git repository with initial Ansible codebase.
@@ -153,7 +154,7 @@ Create README.md files for each role explaining purpose, variables, tasks, and h
 Add comments within your playbooks and roles to explain complex logic.
 
 Deliverables:
-[README.md ](README.md) files for webserver, database, and application roles.
+[README.md ](README.md)     files for webserver, database, and application roles.
 Well-documented playbooks and roles.
 
 #Milestone 6: Dynamic Inventory Script
