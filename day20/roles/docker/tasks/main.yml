@@ -1,0 +1,65 @@
+---
+# tasks file for roles/docker
+
+# - name: Add Docker GPG apt Key
+#   apt_key:
+#     url: https://download.docker.com/linux/ubuntu/gpg
+#     state: present
+#   become: yes
+
+# - name: Add Docker Repository
+#   apt_repository:
+#     repo: deb https://download.docker.com/linux/ubuntu bionic stable
+#     state: present
+#   become: yes
+
+# - name: Add repository into sources list
+#   ansible.builtin.apt_repository:
+#     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
+#     state: present
+#     filename: docker
+#   become: yes
+
+- name: Install Docker 
+  ansible.builtin.apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+    update_cache: true
+  become: yes
+
+- name: Setup docker user
+  ansible.builtin.user:
+    name: docker
+    groups: "docker"
+    append: true
+
+# - name: Install Docker module for Python
+#   ansible.builtin.pip:
+#     name: docker
+#   become: yes
+
+# - name: Install Docker-Compose&Set Permission
+#   ansible.builtin.shell:
+#     shell: wget https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+#     dest: /usr/local/bin/docker-compose
+#     mode: '755'
+
+# - name: Create Docker-Compose symlink
+#   ansible.builtin.command:
+#     cmd: ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+#     creates: /usr/bin/docker-compose
+
+# - name: Add private registry
+#   ansible.builtin.template:
+#     src: daemon.j2
+#     dest: /etc/docker/daemon.json
+#     mode: preserve
+
+- name: Restart Docker
+  ansible.builtin.service:
+    name: docker
+    state: restarted
+    enabled: true 

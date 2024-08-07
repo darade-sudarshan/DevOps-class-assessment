@@ -1,0 +1,15 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+  - us-west-1
+  - us-east-2
+filters:
+  instance-state-name:
+    - running
+  tag:Name: 
+    - Sudharshan
+hostnames:
+  - dns-name
+compose:
+  ansible_host: public_ip_address
+  ansible_user: ubuntu
