@@ -1,0 +1,8 @@
+---
+# handlers file for roles/Mysql
+# mysql/handlers/main.yml
+- name: Restart MySQL
+  service:
+    name: mysql
+    state: restarted
+  become: yes

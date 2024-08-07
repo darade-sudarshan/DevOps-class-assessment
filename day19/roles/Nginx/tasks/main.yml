@@ -1,0 +1,21 @@
+---
+# tasks file for roles/Nginx
+- name: Ensure NGINX is installed
+  apt:
+    name: "{{ nginx_package }}"
+    state: present
+  become: yes
+
+- name: Ensure NGINX service is enabled and started
+  service:
+    name: "{{ nginx_service }}"
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Deploy NGINX configuration
+  template:
+    src: "{{ nginx_vhost_template }}"
+    dest: "{{ nginx_vhost_conf }}"
+  notify: Reload NGINX
+  become: yes

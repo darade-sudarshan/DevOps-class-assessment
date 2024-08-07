@@ -1,0 +1,7 @@
+---
+# defaults file for roles/Nginx
+nginx_package: nginx
+nginx_service: nginx
+nginx_conf: /etc/nginx/nginx.conf
+nginx_vhost_conf: /etc/nginx/conf.d/default.conf
+nginx_vhost_template: default.conf.j2

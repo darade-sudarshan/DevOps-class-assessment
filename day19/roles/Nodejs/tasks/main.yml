@@ -1,0 +1,22 @@
+---
+# tasks file for roles/Nodejs
+- name: Add NodeSource GPG key
+  ansible.builtin.shell: |
+    wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
+  become: yes
+
+- name: Add NodeSource repository for Node.js
+  ansible.builtin.shell: |
+   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash - 
+  become: yes
+
+- name: Update APT package cache
+  apt:
+    update_cache: yes
+  become: yes
+
+- name: Ensure Node.js is installed 
+  apt:
+    name: nodejs
+    state: present
+  become: yes
