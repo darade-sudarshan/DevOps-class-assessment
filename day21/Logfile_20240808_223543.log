@@ -1,0 +1,68 @@
+Running System Performance Metrics Check at Thu 08 Aug 2024 10:35:43 PM IST
+disk usage for all mounted filesystems
+/dev/loop24      64M   64M     0 100% /snap/core20/2264
+/dev/loop27     165M  165M     0 100% /snap/gnome-3-28-1804/198
+/dev/loop8       88M   88M     0 100% /snap/teams-for-linux/645
+/dev/loop25      39M   39M     0 100% /snap/snapd/21759
+/dev/loop33     341M  341M     0 100% /snap/eclipse/95
+/dev/loop23      13M   13M     0 100% /snap/kubectl/3302
+/dev/loop26     506M  506M     0 100% /snap/gnome-42-2204/176
+/dev/loop19     505M  505M     0 100% /snap/gnome-42-2204/172
+/dev/loop9      1.1G  1.1G     0 100% /snap/intellij-idea-community/523
+/dev/loop21      39M   39M     0 100% /snap/snapd/21465
+/dev/loop30     4.3M  4.3M     0 100% /snap/tree/18
+/dev/loop35     182M  182M     0 100% /snap/storage-explorer/60
+/dev/loop37      56M   56M     0 100% /snap/core18/2823
+/dev/loop28      13M   13M     0 100% /snap/snap-store/1113
+/dev/loop15     675M  675M     0 100% /snap/pycharm-community/403
+/dev/loop34      75M   75M     0 100% /snap/core22/1380
+/dev/loop20     314M  314M     0 100% /snap/code/165
+/dev/loop16     128K  128K     0 100% /snap/bare/5
+/dev/loop18      88M   88M     0 100% /snap/teams-for-linux/649
+/dev/loop29     856M  856M     0 100% /snap/intellij-idea-community/522
+/dev/loop38      56M   56M     0 100% /snap/core18/2829
+/dev/loop36      64M   64M     0 100% /snap/core20/2318
+/dev/loop32     183M  183M     0 100% /snap/storage-explorer/61
+/dev/loop39      75M   75M     0 100% /snap/core22/1439
+/dev/loop40     9.8M  9.8M     0 100% /snap/htop/4407
+/dev/loop31      46M   46M     0 100% /snap/snap-store/638
+/dev/loop41     350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/nvme0n1p1  511M  6.1M  505M   2% /boot/efi
+tmpfs           3.2G   20K  3.2G   1% /run/user/126
+tmpfs           3.2G   48K  3.2G   1% /run/user/1000
+
+memory usage
+
+              total        used        free      shared  buff/cache   available
+Mem:           31Gi       9.5Gi        14Gi       130Mi       7.2Gi        21Gi
+Swap:         2.0Gi          0B       2.0Gi
+
+System Uptime:
+up 8 minutes
+
+Network Status:
+        inet 192.168.49.1  netmask 255.255.255.0  broadcast 192.168.49.255
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        inet 192.168.0.29  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::1148:4207:2253:d3e9  prefixlen 64  scopeid 0x20<link>
+
+Top Running Processes:
+top - 22:35:43 up 8 min,  1 user,  load average: 1.13, 1.45, 0.88
+Tasks: 435 total,   1 running, 434 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.8 us,  1.4 sy,  0.0 ni, 95.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  31929.5 total,  14737.3 free,   9772.5 used,   7419.7 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  21565.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  12134 einfoch+  20   0 1136.4g 311472 103404 S  18.8   1.0   0:26.61 code
+  33536 einfoch+  20   0    9484   4020   3232 R  12.5   0.0   0:00.02 top
+    673 root     -51   0       0      0      0 S   6.2   0.0   0:11.59 irq/182+
+   4066 einfoch+  20   0 4304964 383584 139508 S   6.2   1.2   0:26.43 gnome-s+
+  12112 einfoch+  20   0   32.5g 176284 139044 S   6.2   0.5   0:08.55 code
+  12217 einfoch+  20   0 1131.9g  98524  73256 S   6.2   0.3   0:01.24 code
+      1 root      20   0  168904  12348   8496 S   0.0   0.0   0:01.55 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+
+
