@@ -125,6 +125,8 @@ Delete Load Balancer and Target Groups:
 
 Delete the ALB and the associated target groups.
 
+![alt text](img/image24.png)
+
 Cleanup Security Groups:
 
 Delete the security groups created for the project.
