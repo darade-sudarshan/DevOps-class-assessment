@@ -236,6 +236,8 @@ across the EC2 instances.
 
 ■      Validate database connections and transactions (e.g., creating orders, adding products).
 
+![alt text](img/image39.png)
+
 ■      Test the security configurations by attempting to access restricted resources and ensuring proper logging of unauthorized access attempts.
 
 ○      Optimization:
