@@ -1,0 +1,7 @@
+instance_type = "t3.micro"  # Override default instance type
+region        = "us-west-2"  # Override default region
+environment   = "prod"  # Override default environment
+availability_zone = "us-west-2a"
+vpc_id            = "vpc-0ce7e493dd24da8fa"
+key_name          = "sudarshan-new"
+subnet_id         = "subnet-0391493f76a59aa14"
