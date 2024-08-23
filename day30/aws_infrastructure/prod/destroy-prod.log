@@ -1,0 +1,412 @@
+module.s3.aws_iam_instance_profile.ec2_instance_profile: Refreshing state... [id=prod_ec2_instance_profile]
+module.vpc.aws_vpc.ProjectVPC: Refreshing state... [id=vpc-00217fc5a590082e1]
+module.s3.aws_s3_bucket.S3_app_bucket: Refreshing state... [id=day30-sudarshan-terraform-prod]
+module.vpc.aws_internet_gateway.Project_igw: Refreshing state... [id=igw-0bb327c96e256d91e]
+module.vpc.aws_subnet.Project_public_subnet: Refreshing state... [id=subnet-089ca6e25ac254fcb]
+module.vpc.aws_security_group.ec2_sg_ssh: Refreshing state... [id=sg-04ac4328003a16743]
+module.vpc.aws_route_table.Project_public_rt: Refreshing state... [id=rtb-0a52b17477fcb0e77]
+module.ec2.aws_instance.webserver: Refreshing state... [id=i-0285027f1b144d908]
+module.vpc.aws_route_table_association.Project_public_rt_assoc: Refreshing state... [id=rtbassoc-0734425f3ec8e4782]
+module.s3.aws_s3_bucket_policy.s3_policy: Refreshing state... [id=day30-sudarshan-terraform-prod]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.ec2.aws_instance.webserver will be destroyed
+  - resource "aws_instance" "webserver" {
+      - ami                                  = "ami-05134c8ef96964280" -> null
+      - arn                                  = "arn:aws:ec2:us-west-2:339713134976:instance/i-0285027f1b144d908" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-west-2a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - iam_instance_profile                 = "prod_ec2_instance_profile" -> null
+      - id                                   = "i-0285027f1b144d908" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "sudarshan-tf-key-pair.pem" -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0bcedd857d955d8ca" -> null
+      - private_dns                          = "ip-10-0-2-88.us-west-2.compute.internal" -> null
+      - private_ip                           = "10.0.2.88" -> null
+      - public_ip                            = "54.185.215.161" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-089ca6e25ac254fcb" -> null
+      - tags                                 = {
+          - "Environment" = "prod"
+          - "Name"        = "Webserver-sudarshan-prod"
+        } -> null
+      - tags_all                             = {
+          - "Environment" = "prod"
+          - "Name"        = "Webserver-sudarshan-prod"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-04ac4328003a16743",
+        ] -> null
+        # (7 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/sda1" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0aa9467e13c39228c" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.s3.aws_iam_instance_profile.ec2_instance_profile will be destroyed
+  - resource "aws_iam_instance_profile" "ec2_instance_profile" {
+      - arn         = "arn:aws:iam::339713134976:instance-profile/prod_ec2_instance_profile" -> null
+      - create_date = "2024-08-23T09:15:44Z" -> null
+      - id          = "prod_ec2_instance_profile" -> null
+      - name        = "prod_ec2_instance_profile" -> null
+      - path        = "/" -> null
+      - role        = "EC2-S3-Role" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+      - unique_id   = "AIPAU6GD3CGAGNH4DK5XN" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.s3.aws_s3_bucket.S3_app_bucket will be destroyed
+  - resource "aws_s3_bucket" "S3_app_bucket" {
+      - arn                         = "arn:aws:s3:::day30-sudarshan-terraform-prod" -> null
+      - bucket                      = "day30-sudarshan-terraform-prod" -> null
+      - bucket_domain_name          = "day30-sudarshan-terraform-prod.s3.amazonaws.com" -> null
+      - bucket_regional_domain_name = "day30-sudarshan-terraform-prod.s3.us-west-2.amazonaws.com" -> null
+      - force_destroy               = false -> null
+      - hosted_zone_id              = "Z3BJ6K6RIION7M" -> null
+      - id                          = "day30-sudarshan-terraform-prod" -> null
+      - object_lock_enabled         = false -> null
+      - policy                      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = [
+                          - "s3:GetObject",
+                          - "s3:PutObject",
+                          - "s3:ListBucket",
+                        ]
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "arn:aws:iam::339713134976:role/EC2-S3-Role"
+                        }
+                      - Resource  = [
+                          - "arn:aws:s3:::day30-sudarshan-terraform-prod",
+                          - "arn:aws:s3:::day30-sudarshan-terraform-prod/*",
+                        ]
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region                      = "us-west-2" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {
+          - "Environment" = "prod"
+          - "Name"        = "day30-sudarshan-terraform-prod"
+        } -> null
+      - tags_all                    = {
+          - "Environment" = "prod"
+          - "Name"        = "day30-sudarshan-terraform-prod"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - grant {
+          - id          = "a2a28716b2488746fc1a95894dbdbbb35cc23bbca7050e56d0cf8b6b85fdb212" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # module.s3.aws_s3_bucket_policy.s3_policy will be destroyed
+  - resource "aws_s3_bucket_policy" "s3_policy" {
+      - bucket = "day30-sudarshan-terraform-prod" -> null
+      - id     = "day30-sudarshan-terraform-prod" -> null
+      - policy = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = [
+                          - "s3:GetObject",
+                          - "s3:PutObject",
+                          - "s3:ListBucket",
+                        ]
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "arn:aws:iam::339713134976:role/EC2-S3-Role"
+                        }
+                      - Resource  = [
+                          - "arn:aws:s3:::day30-sudarshan-terraform-prod",
+                          - "arn:aws:s3:::day30-sudarshan-terraform-prod/*",
+                        ]
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+    }
+
+  # module.vpc.aws_internet_gateway.Project_igw will be destroyed
+  - resource "aws_internet_gateway" "Project_igw" {
+      - arn      = "arn:aws:ec2:us-west-2:339713134976:internet-gateway/igw-0bb327c96e256d91e" -> null
+      - id       = "igw-0bb327c96e256d91e" -> null
+      - owner_id = "339713134976" -> null
+      - tags     = {
+          - "Name" = "Sudarshan-IGW"
+        } -> null
+      - tags_all = {
+          - "Name" = "Sudarshan-IGW"
+        } -> null
+      - vpc_id   = "vpc-00217fc5a590082e1" -> null
+    }
+
+  # module.vpc.aws_route_table.Project_public_rt will be destroyed
+  - resource "aws_route_table" "Project_public_rt" {
+      - arn              = "arn:aws:ec2:us-west-2:339713134976:route-table/rtb-0a52b17477fcb0e77" -> null
+      - id               = "rtb-0a52b17477fcb0e77" -> null
+      - owner_id         = "339713134976" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0bb327c96e256d91e"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {} -> null
+      - tags_all         = {} -> null
+      - vpc_id           = "vpc-00217fc5a590082e1" -> null
+    }
+
+  # module.vpc.aws_route_table_association.Project_public_rt_assoc will be destroyed
+  - resource "aws_route_table_association" "Project_public_rt_assoc" {
+      - id             = "rtbassoc-0734425f3ec8e4782" -> null
+      - route_table_id = "rtb-0a52b17477fcb0e77" -> null
+      - subnet_id      = "subnet-089ca6e25ac254fcb" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_security_group.ec2_sg_ssh will be destroyed
+  - resource "aws_security_group" "ec2_sg_ssh" {
+      - arn                    = "arn:aws:ec2:us-west-2:339713134976:security-group/sg-04ac4328003a16743" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - id                     = "sg-04ac4328003a16743" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+                # (1 unchanged attribute hidden)
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - name                   = "terraform-20240823091548692900000001" -> null
+      - name_prefix            = "terraform-" -> null
+      - owner_id               = "339713134976" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "Sudarshan-ec2-ssh-SG"
+        } -> null
+      - tags_all               = {
+          - "Name" = "Sudarshan-ec2-ssh-SG"
+        } -> null
+      - vpc_id                 = "vpc-00217fc5a590082e1" -> null
+    }
+
+  # module.vpc.aws_subnet.Project_public_subnet will be destroyed
+  - resource "aws_subnet" "Project_public_subnet" {
+      - arn                                            = "arn:aws:ec2:us-west-2:339713134976:subnet/subnet-089ca6e25ac254fcb" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-west-2a" -> null
+      - availability_zone_id                           = "usw2-az1" -> null
+      - cidr_block                                     = "10.0.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-089ca6e25ac254fcb" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "339713134976" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {} -> null
+      - tags_all                                       = {} -> null
+      - vpc_id                                         = "vpc-00217fc5a590082e1" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_vpc.ProjectVPC will be destroyed
+  - resource "aws_vpc" "ProjectVPC" {
+      - arn                                  = "arn:aws:ec2:us-west-2:339713134976:vpc/vpc-00217fc5a590082e1" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.0.0.0/16" -> null
+      - default_network_acl_id               = "acl-0947f3cf2d4746473" -> null
+      - default_route_table_id               = "rtb-08b4bd7643bc52d67" -> null
+      - default_security_group_id            = "sg-01b7f54c4c328eecb" -> null
+      - dhcp_options_id                      = "dopt-00b97444fd7b25b50" -> null
+      - enable_dns_hostnames                 = false -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-00217fc5a590082e1" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-08b4bd7643bc52d67" -> null
+      - owner_id                             = "339713134976" -> null
+      - tags                                 = {
+          - "Name" = "Sudarshan-VPC"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "Sudarshan-VPC"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 10 to destroy.
+
+Do you really want to destroy all resources in workspace "prod"?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+module.s3.aws_s3_bucket_policy.s3_policy: Destroying... [id=day30-sudarshan-terraform-prod]
+module.vpc.aws_route_table_association.Project_public_rt_assoc: Destroying... [id=rtbassoc-0734425f3ec8e4782]
+module.ec2.aws_instance.webserver: Destroying... [id=i-0285027f1b144d908]
+module.s3.aws_s3_bucket_policy.s3_policy: Destruction complete after 2s
+module.s3.aws_s3_bucket.S3_app_bucket: Destroying... [id=day30-sudarshan-terraform-prod]
+module.vpc.aws_route_table_association.Project_public_rt_assoc: Destruction complete after 3s
+module.vpc.aws_route_table.Project_public_rt: Destroying... [id=rtb-0a52b17477fcb0e77]
+module.s3.aws_s3_bucket.S3_app_bucket: Destruction complete after 1s
+module.vpc.aws_route_table.Project_public_rt: Destruction complete after 1s
+module.vpc.aws_internet_gateway.Project_igw: Destroying... [id=igw-0bb327c96e256d91e]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0285027f1b144d908, 10s elapsed]
+module.vpc.aws_internet_gateway.Project_igw: Still destroying... [id=igw-0bb327c96e256d91e, 10s elapsed]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0285027f1b144d908, 20s elapsed]
+module.vpc.aws_internet_gateway.Project_igw: Still destroying... [id=igw-0bb327c96e256d91e, 20s elapsed]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0285027f1b144d908, 30s elapsed]
+module.vpc.aws_internet_gateway.Project_igw: Still destroying... [id=igw-0bb327c96e256d91e, 30s elapsed]
+module.vpc.aws_internet_gateway.Project_igw: Destruction complete after 35s
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0285027f1b144d908, 40s elapsed]
+module.ec2.aws_instance.webserver: Destruction complete after 48s
+module.s3.aws_iam_instance_profile.ec2_instance_profile: Destroying... [id=prod_ec2_instance_profile]
+module.vpc.aws_subnet.Project_public_subnet: Destroying... [id=subnet-089ca6e25ac254fcb]
+module.vpc.aws_security_group.ec2_sg_ssh: Destroying... [id=sg-04ac4328003a16743]
+module.vpc.aws_subnet.Project_public_subnet: Destruction complete after 1s
+module.s3.aws_iam_instance_profile.ec2_instance_profile: Destruction complete after 1s
+module.vpc.aws_security_group.ec2_sg_ssh: Destruction complete after 2s
+module.vpc.aws_vpc.ProjectVPC: Destroying... [id=vpc-00217fc5a590082e1]
+module.vpc.aws_vpc.ProjectVPC: Destruction complete after 1s
+
+Destroy complete! Resources: 10 destroyed.

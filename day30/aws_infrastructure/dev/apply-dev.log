@@ -1,0 +1,1188 @@
+tls_private_key.rsa: Refreshing state... [id=9a0574a4964771f5c1b717d81a451ce11fea4161]
+local_file.tf_key: Refreshing state... [id=23f377ae61638bc3ce923be954b1155a91d570a9]
+module.s3.aws_iam_instance_profile.ec2_instance_profile: Refreshing state... [id=dev_ec2_instance_profile]
+aws_key_pair.tf_key_pair: Refreshing state... [id=sudarshan-tf-key-pair.pem]
+module.vpc.aws_vpc.ProjectVPC: Refreshing state... [id=vpc-0efa109d7e090a9a6]
+module.s3.aws_s3_bucket.S3_app_bucket: Refreshing state... [id=day30-sudarshan-terraform]
+module.vpc.aws_internet_gateway.Project_igw: Refreshing state... [id=igw-094f6b00e9cee21a4]
+module.vpc.aws_subnet.Project_public_subnet: Refreshing state... [id=subnet-0b8f5a65493a4fb60]
+module.vpc.aws_security_group.ec2_sg_ssh: Refreshing state... [id=sg-08b35375554f6807c]
+module.vpc.aws_route_table.Project_public_rt: Refreshing state... [id=rtb-06a6ab28b09701235]
+module.ec2.aws_instance.webserver: Refreshing state... [id=i-0640c0f42b7dac97b]
+module.vpc.aws_route_table_association.Project_public_rt_assoc: Refreshing state... [id=rtbassoc-019e3c621d19eb741]
+module.s3.aws_s3_bucket_policy.s3_policy: Refreshing state... [id=day30-sudarshan-terraform]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # module.ec2.aws_instance.webserver is tainted, so must be replaced
+-/+ resource "aws_instance" "webserver" {
+      ~ arn                                  = "arn:aws:ec2:us-west-2:339713134976:instance/i-0640c0f42b7dac97b" -> (known after apply)
+      ~ cpu_core_count                       = 1 -> (known after apply)
+      ~ cpu_threads_per_core                 = 1 -> (known after apply)
+      ~ disable_api_stop                     = false -> (known after apply)
+      ~ disable_api_termination              = false -> (known after apply)
+      ~ ebs_optimized                        = false -> (known after apply)
+      - hibernation                          = false -> null
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      ~ id                                   = "i-0640c0f42b7dac97b" -> (known after apply)
+      ~ instance_initiated_shutdown_behavior = "stop" -> (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      ~ instance_state                       = "running" -> (known after apply)
+      ~ ipv6_address_count                   = 0 -> (known after apply)
+      ~ ipv6_addresses                       = [] -> (known after apply)
+      ~ monitoring                           = false -> (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      ~ placement_partition_number           = 0 -> (known after apply)
+      ~ primary_network_interface_id         = "eni-08838a01a161b346f" -> (known after apply)
+      ~ private_dns                          = "ip-10-0-1-5.us-west-2.compute.internal" -> (known after apply)
+      ~ private_ip                           = "10.0.1.5" -> (known after apply)
+      + public_dns                           = (known after apply)
+      ~ public_ip                            = "35.164.239.241" -> (known after apply)
+      ~ secondary_private_ips                = [] -> (known after apply)
+      ~ security_groups                      = [] -> (known after apply)
+      + spot_instance_request_id             = (known after apply)
+        tags                                 = {
+            "Environment" = "dev"
+            "Name"        = "Webserver-sudarshan"
+        }
+      ~ tenancy                              = "default" -> (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+        # (12 unchanged attributes hidden)
+
+      ~ capacity_reservation_specification {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ cpu_options {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      ~ ebs_block_device {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ enclave_options {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ ephemeral_block_device {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ instance_market_options {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ maintenance_options {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ metadata_options {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ network_interface {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ private_dns_name_options {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+
+      ~ root_block_device {
+          + ami                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + associate_public_ip_address          = (known after apply)
+          + availability_zone                    = (known after apply)
+          + cpu_core_count                       = (known after apply)
+          + cpu_threads_per_core                 = (known after apply)
+          + disable_api_stop                     = (known after apply)
+          + disable_api_termination              = (known after apply)
+          + ebs_optimized                        = (known after apply)
+          + get_password_data                    = (known after apply)
+          + hibernation                          = (known after apply)
+          + host_id                              = (known after apply)
+          + host_resource_group_arn              = (known after apply)
+          + iam_instance_profile                 = (known after apply)
+          + id                                   = (known after apply)
+          + instance_initiated_shutdown_behavior = (known after apply)
+          + instance_lifecycle                   = (known after apply)
+          + instance_state                       = (known after apply)
+          + instance_type                        = (known after apply)
+          + ipv6_address_count                   = (known after apply)
+          + ipv6_addresses                       = (known after apply)
+          + key_name                             = (known after apply)
+          + monitoring                           = (known after apply)
+          + outpost_arn                          = (known after apply)
+          + password_data                        = (known after apply)
+          + placement_group                      = (known after apply)
+          + placement_partition_number           = (known after apply)
+          + primary_network_interface_id         = (known after apply)
+          + private_dns                          = (known after apply)
+          + private_ip                           = (known after apply)
+          + public_dns                           = (known after apply)
+          + public_ip                            = (known after apply)
+          + secondary_private_ips                = (known after apply)
+          + security_groups                      = (known after apply)
+          + source_dest_check                    = (known after apply)
+          + spot_instance_request_id             = (known after apply)
+          + subnet_id                            = (known after apply)
+          + tags                                 = (known after apply)
+          + tags_all                             = (known after apply)
+          + tenancy                              = (known after apply)
+          + user_data                            = (known after apply)
+          + user_data_base64                     = (known after apply)
+          + user_data_replace_on_change          = (known after apply)
+          + volume_tags                          = (known after apply)
+          + vpc_security_group_ids               = (known after apply)
+        } -> (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+Do you want to perform these actions in workspace "dev"?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+module.ec2.aws_instance.webserver: Destroying... [id=i-0640c0f42b7dac97b]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0640c0f42b7dac97b, 10s elapsed]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0640c0f42b7dac97b, 20s elapsed]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0640c0f42b7dac97b, 30s elapsed]
+module.ec2.aws_instance.webserver: Still destroying... [id=i-0640c0f42b7dac97b, 40s elapsed]
+module.ec2.aws_instance.webserver: Destruction complete after 44s
+module.ec2.aws_instance.webserver: Creating...
+module.ec2.aws_instance.webserver: Still creating... [10s elapsed]
+module.ec2.aws_instance.webserver: Still creating... [20s elapsed]
+module.ec2.aws_instance.webserver: Still creating... [30s elapsed]
+module.ec2.aws_instance.webserver: Provisioning with 'remote-exec'...
+module.ec2.aws_instance.webserver (remote-exec): Connecting to remote host via SSH...
+module.ec2.aws_instance.webserver (remote-exec):   Host: 44.243.38.228
+module.ec2.aws_instance.webserver (remote-exec):   User: ubuntu
+module.ec2.aws_instance.webserver (remote-exec):   Password: false
+module.ec2.aws_instance.webserver (remote-exec):   Private key: true
+module.ec2.aws_instance.webserver (remote-exec):   Certificate: false
+module.ec2.aws_instance.webserver (remote-exec):   SSH Agent: true
+module.ec2.aws_instance.webserver (remote-exec):   Checking Host Key: false
+module.ec2.aws_instance.webserver (remote-exec):   Target Platform: unix
+module.ec2.aws_instance.webserver: Still creating... [40s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): Connecting to remote host via SSH...
+module.ec2.aws_instance.webserver (remote-exec):   Host: 44.243.38.228
+module.ec2.aws_instance.webserver (remote-exec):   User: ubuntu
+module.ec2.aws_instance.webserver (remote-exec):   Password: false
+module.ec2.aws_instance.webserver (remote-exec):   Private key: true
+module.ec2.aws_instance.webserver (remote-exec):   Certificate: false
+module.ec2.aws_instance.webserver (remote-exec):   SSH Agent: true
+module.ec2.aws_instance.webserver (remote-exec):   Checking Host Key: false
+module.ec2.aws_instance.webserver (remote-exec):   Target Platform: unix
+module.ec2.aws_instance.webserver (remote-exec): Connecting to remote host via SSH...
+module.ec2.aws_instance.webserver (remote-exec):   Host: 44.243.38.228
+module.ec2.aws_instance.webserver (remote-exec):   User: ubuntu
+module.ec2.aws_instance.webserver (remote-exec):   Password: false
+module.ec2.aws_instance.webserver (remote-exec):   Private key: true
+module.ec2.aws_instance.webserver (remote-exec):   Certificate: false
+module.ec2.aws_instance.webserver (remote-exec):   SSH Agent: true
+module.ec2.aws_instance.webserver (remote-exec):   Checking Host Key: false
+module.ec2.aws_instance.webserver (remote-exec):   Target Platform: unix
+module.ec2.aws_instance.webserver (remote-exec): Connecting to remote host via SSH...
+module.ec2.aws_instance.webserver (remote-exec):   Host: 44.243.38.228
+module.ec2.aws_instance.webserver (remote-exec):   User: ubuntu
+module.ec2.aws_instance.webserver (remote-exec):   Password: false
+module.ec2.aws_instance.webserver (remote-exec):   Private key: true
+module.ec2.aws_instance.webserver (remote-exec):   Certificate: false
+module.ec2.aws_instance.webserver (remote-exec):   SSH Agent: true
+module.ec2.aws_instance.webserver (remote-exec):   Checking Host Key: false
+module.ec2.aws_instance.webserver (remote-exec):   Target Platform: unix
+module.ec2.aws_instance.webserver: Still creating... [50s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): Connected!
+module.ec2.aws_instance.webserver (remote-exec): 0% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+module.ec2.aws_instance.webserver (remote-exec): 0% [Connecting to security.ubuntu.com (
+module.ec2.aws_instance.webserver (remote-exec): Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [Connecting to security.ubuntu.com (
+module.ec2.aws_instance.webserver (remote-exec): 0% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages 61.4 kB/15.0 MB 0%] [Wai
+module.ec2.aws_instance.webserver (remote-exec): Get:5 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages 2551 kB/15.0 MB 17%] [5
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages 6680 kB/15.0 MB 44%] [5
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages 13.5 MB/15.0 MB 90%] [5
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 InRelease 114 kB/126 kB 90%]
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe Translation-en [5982 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages store 0 B] [6 Translatio
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 Packages store 0 B] [6 Translatio
+module.ec2.aws_instance.webserver (remote-exec): 72% [4 Packages store 0 B] [6 Translati
+module.ec2.aws_instance.webserver (remote-exec): Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 Components [3871 kB]
+module.ec2.aws_instance.webserver (remote-exec): 74% [4 Packages store 0 B] [7 Component
+module.ec2.aws_instance.webserver (remote-exec): Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 c-n-f Metadata [301 kB]
+module.ec2.aws_instance.webserver (remote-exec): 83% [4 Packages store 0 B] [8 Commands-
+module.ec2.aws_instance.webserver (remote-exec): 84% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [269 kB]
+module.ec2.aws_instance.webserver (remote-exec): 84% [4 Packages store 0 B] [9 Packages
+module.ec2.aws_instance.webserver (remote-exec): 85% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse Translation-en [118 kB]
+module.ec2.aws_instance.webserver (remote-exec): 85% [4 Packages store 0 B] [10 Translat
+module.ec2.aws_instance.webserver (remote-exec): 85% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 Components [35.0 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 c-n-f Metadata [8328 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [409 kB]
+module.ec2.aws_instance.webserver (remote-exec): 85% [4 Packages store 0 B] [13 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [105 kB]
+module.ec2.aws_instance.webserver (remote-exec): 87% [4 Packages store 0 B] [14 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [7220 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [337 kB]
+module.ec2.aws_instance.webserver (remote-exec): 87% [4 Packages store 0 B] [16 Packages
+module.ec2.aws_instance.webserver (remote-exec): 88% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [142 kB]
+module.ec2.aws_instance.webserver (remote-exec): 88% [4 Packages store 0 B] [17 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [45.0 kB]
+module.ec2.aws_instance.webserver (remote-exec): 88% [4 Packages store 0 B] [18 Componen
+module.ec2.aws_instance.webserver (remote-exec): Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [13.6 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [280 kB]
+module.ec2.aws_instance.webserver (remote-exec): 88% [4 Packages store 0 B] [20 Packages
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [54.8 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [14.1 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [3608 B]
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [23 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [212 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [532 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 c-n-f Metadata [112 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [10.3 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [10.5 kB]
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [17.6 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1016 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:32 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:33 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 c-n-f Metadata [116 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:34 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:35 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 c-n-f Metadata [116 B]
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:36 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [323 kB]
+module.ec2.aws_instance.webserver (remote-exec): 89% [4 Packages store 0 B] [36 Packages
+module.ec2.aws_instance.webserver (remote-exec): 90% [4 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:37 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [73.1 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [4 Packages store 0 B] [37 Translat
+module.ec2.aws_instance.webserver (remote-exec): 90% [4 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:38 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [4220 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [4 Packages store 0 B] [38 Commands
+module.ec2.aws_instance.webserver (remote-exec): Get:39 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [252 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [4 Packages store 0 B] [39 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:40 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [109 kB]
+module.ec2.aws_instance.webserver (remote-exec): 91% [4 Packages store 0 B] [40 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:41 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [8632 B]
+module.ec2.aws_instance.webserver (remote-exec): 91% [4 Packages store 0 B] [41 Componen
+module.ec2.aws_instance.webserver (remote-exec): Get:42 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [9756 B]
+module.ec2.aws_instance.webserver (remote-exec): 91% [4 Packages store 0 B] [42 Commands
+module.ec2.aws_instance.webserver (remote-exec): Get:43 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [280 kB]
+module.ec2.aws_instance.webserver (remote-exec): 91% [4 Packages store 0 B] [43 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:44 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [54.8 kB]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B] [44 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:45 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [10.6 kB]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B] [45 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:46 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [2808 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B] [46 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:47 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:48 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [344 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [4 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [6 Translation-en store 0 B]
+module.ec2.aws_instance.webserver: Still creating... [1m0s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): 93% [6 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [7 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [7 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [7 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [8 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [9 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [10 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [11 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [12 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [13 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [14 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [15 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [16 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [17 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [18 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [19 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [20 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [21 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [22 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [23 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [25 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [27 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [28 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [29 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [30 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [31 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [32 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [33 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [34 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [35 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [36 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [37 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [38 Commands-amd64 store 14.4 kB]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [39 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [40 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [41 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [42 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [43 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [44 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [45 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [46 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 100% [47 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Fetched 28.6 MB in 6s (5117 kB/s)
+module.ec2.aws_instance.webserver: Still creating... [1m10s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 5%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 5%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 7%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 7%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 61%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 61%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 78%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 86%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 86%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 86%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 86%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 87%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 87%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 87%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 87%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 89%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 89%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 90%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 90%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 95%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 95%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 96%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 96%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 98%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 98%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... Done
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 100%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... Done
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 0%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 0%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 50%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 50%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... Done
+module.ec2.aws_instance.webserver (remote-exec): Reading state information... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading state information... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading state information... Done
+module.ec2.aws_instance.webserver (remote-exec): The following additional packages will be installed:
+module.ec2.aws_instance.webserver (remote-exec):   apache2-bin apache2-data
+module.ec2.aws_instance.webserver (remote-exec):   apache2-utils libapr1t64
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-dbd-sqlite3
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-ldap libaprutil1t64
+module.ec2.aws_instance.webserver (remote-exec):   liblua5.4-0 ssl-cert
+module.ec2.aws_instance.webserver (remote-exec): Suggested packages:
+module.ec2.aws_instance.webserver (remote-exec):   apache2-doc apache2-suexec-pristine
+module.ec2.aws_instance.webserver (remote-exec):   | apache2-suexec-custom www-browser
+module.ec2.aws_instance.webserver (remote-exec): The following NEW packages will be installed:
+module.ec2.aws_instance.webserver (remote-exec):   apache2 apache2-bin apache2-data
+module.ec2.aws_instance.webserver (remote-exec):   apache2-utils libapr1t64
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-dbd-sqlite3
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-ldap libaprutil1t64
+module.ec2.aws_instance.webserver (remote-exec):   liblua5.4-0 ssl-cert
+module.ec2.aws_instance.webserver (remote-exec): 0 upgraded, 10 newly installed, 0 to remove and 86 not upgraded.
+module.ec2.aws_instance.webserver (remote-exec): Need to get 2083 kB of archives.
+module.ec2.aws_instance.webserver (remote-exec): After this operation, 8094 kB of additional disk space will be used.
+module.ec2.aws_instance.webserver (remote-exec): 0% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libapr1t64 amd64 1.7.2-3.1build2 [107 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [1 libapr1t64 0 B/107 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 6% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7 [91.9 kB]
+module.ec2.aws_instance.webserver (remote-exec): 7% [2 libaprutil1t64 20.5 kB/91.9 kB 22
+module.ec2.aws_instance.webserver (remote-exec): 12% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7 [11.2 kB]
+module.ec2.aws_instance.webserver (remote-exec): 14% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7 [9116 B]
+module.ec2.aws_instance.webserver (remote-exec): 16% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+module.ec2.aws_instance.webserver (remote-exec): 18% [5 liblua5.4-0 45.3 kB/166 kB 27%]
+module.ec2.aws_instance.webserver (remote-exec): 25% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.4 [1329 kB]
+module.ec2.aws_instance.webserver (remote-exec): 26% [6 apache2-bin 24.6 kB/1329 kB 2%]
+module.ec2.aws_instance.webserver (remote-exec): 78% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.4 [163 kB]
+module.ec2.aws_instance.webserver (remote-exec): 79% [7 apache2-data 19.5 kB/163 kB 12%]
+module.ec2.aws_instance.webserver (remote-exec): Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.4 [97.1 kB]
+module.ec2.aws_instance.webserver (remote-exec): 87% [8 apache2-utils 16.7 kB/97.1 kB 17
+module.ec2.aws_instance.webserver (remote-exec): 92% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.4 [90.2 kB]
+module.ec2.aws_instance.webserver (remote-exec): 93% [9 apache2 19.5 kB/90.2 kB 22%]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Fetched 2083 kB in 1s (2854 kB/s)
+module.ec2.aws_instance.webserver (remote-exec): Preconfiguring packages ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libapr1t64:amd64.
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ...
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 5%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 10%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 15%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 20%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 25%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 30%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 35%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 40%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 45%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 50%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 55%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 60%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 65%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 70%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 75%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 80%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 85%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 90%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 95%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 100%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 67741 files and directories currently installed.)
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../0-libapr1t64_1.7.2-3.1build2_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libapr1t64:amd64 (1.7.2-3.1build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libaprutil1t64:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../1-libaprutil1t64_1.6.3-1.1ubuntu7_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libaprutil1-ldap:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../3-libaprutil1-ldap_1.6.3-1.1ubuntu7_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package liblua5.4-0:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../4-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking liblua5.4-0:amd64 (5.4.6-3build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2-bin.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../5-apache2-bin_2.4.58-1ubuntu8.4_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2-bin (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2-data.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../6-apache2-data_2.4.58-1ubuntu8.4_all.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2-data (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2-utils.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../7-apache2-utils_2.4.58-1ubuntu8.4_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2-utils (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../8-apache2_2.4.58-1ubuntu8.4_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2 (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package ssl-cert.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../9-ssl-cert_1.1.2ubuntu1_all.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking ssl-cert (1.1.2ubuntu1) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up ssl-cert (1.1.2ubuntu1) ...
+module.ec2.aws_instance.webserver (remote-exec): Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+module.ec2.aws_instance.webserver (remote-exec): Setting up libapr1t64:amd64 (1.7.2-3.1build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up liblua5.4-0:amd64 (5.4.6-3build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2-data (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2-utils (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2-bin (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2 (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Enabling module mpm_event.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authz_core.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authz_host.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authn_core.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module auth_basic.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module access_compat.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authn_file.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authz_user.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module alias.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module dir.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module autoindex.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module env.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module mime.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module negotiation.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module setenvif.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module filter.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module deflate.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module status.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module reqtimeout.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf charset.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf localized-error-pages.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf other-vhosts-access-log.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf security.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf serve-cgi-bin.
+module.ec2.aws_instance.webserver (remote-exec): Enabling site 000-default.
+module.ec2.aws_instance.webserver (remote-exec): Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /usr/lib/systemd/system/apache2.service.
+module.ec2.aws_instance.webserver (remote-exec): Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /usr/lib/systemd/system/apache-htcacheclean.service.
+module.ec2.aws_instance.webserver: Still creating... [1m20s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): Processing triggers for ufw (0.36.2-6) ...
+module.ec2.aws_instance.webserver (remote-exec): Processing triggers for man-db (2.12.0-4build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Processing triggers for libc-bin (2.39-0ubuntu8.2) ...
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [================]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes...
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [====         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [=============]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images...
+
+module.ec2.aws_instance.webserver (remote-exec): Running kernel seems to be up-to-date.
+
+module.ec2.aws_instance.webserver (remote-exec): No services need to be restarted.
+
+module.ec2.aws_instance.webserver (remote-exec): No containers need to be restarted.
+
+module.ec2.aws_instance.webserver (remote-exec): No user sessions are running outdated
+module.ec2.aws_instance.webserver (remote-exec):  binaries.
+
+module.ec2.aws_instance.webserver (remote-exec): No VM guests are running outdated
+module.ec2.aws_instance.webserver (remote-exec):  hypervisor (qemu) binaries on this
+module.ec2.aws_instance.webserver (remote-exec):  host.
+module.ec2.aws_instance.webserver: Provisioning with 'local-exec'...
+module.ec2.aws_instance.webserver (local-exec): Executing: ["/bin/sh" "-c" "echo 'Apache installation initiated on 44.243.38.228'"]
+module.ec2.aws_instance.webserver (local-exec): Apache installation initiated on 44.243.38.228
+module.ec2.aws_instance.webserver: Creation complete after 1m26s [id=i-07928996d1f6cb8bf]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
