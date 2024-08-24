@@ -1,0 +1,1430 @@
+Acquiring state lock. This may take a few moments...
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.ec2.aws_eip.webserver_eip[0m will be created
+[0m  [32m+[0m[0m resource "aws_eip" "webserver_eip" {
+      [32m+[0m[0m allocation_id        = (known after apply)
+      [32m+[0m[0m arn                  = (known after apply)
+      [32m+[0m[0m association_id       = (known after apply)
+      [32m+[0m[0m carrier_ip           = (known after apply)
+      [32m+[0m[0m customer_owned_ip    = (known after apply)
+      [32m+[0m[0m domain               = "vpc"
+      [32m+[0m[0m id                   = (known after apply)
+      [32m+[0m[0m instance             = (known after apply)
+      [32m+[0m[0m network_border_group = (known after apply)
+      [32m+[0m[0m network_interface    = (known after apply)
+      [32m+[0m[0m private_dns          = (known after apply)
+      [32m+[0m[0m private_ip           = (known after apply)
+      [32m+[0m[0m ptr_record           = (known after apply)
+      [32m+[0m[0m public_dns           = (known after apply)
+      [32m+[0m[0m public_ip            = (known after apply)
+      [32m+[0m[0m public_ipv4_pool     = (known after apply)
+      [32m+[0m[0m tags_all             = (known after apply)
+      [32m+[0m[0m vpc                  = (known after apply)
+    }
+
+[1m  # module.ec2.aws_eip_association.webserver_eip_assoc[0m will be created
+[0m  [32m+[0m[0m resource "aws_eip_association" "webserver_eip_assoc" {
+      [32m+[0m[0m allocation_id        = (known after apply)
+      [32m+[0m[0m id                   = (known after apply)
+      [32m+[0m[0m instance_id          = (known after apply)
+      [32m+[0m[0m network_interface_id = (known after apply)
+      [32m+[0m[0m private_ip_address   = (known after apply)
+      [32m+[0m[0m public_ip            = (known after apply)
+    }
+
+[1m  # module.ec2.aws_instance.webserver[0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "webserver" {
+      [32m+[0m[0m ami                                  = "ami-05134c8ef96964280"
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = (known after apply)
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m cpu_core_count                       = (known after apply)
+      [32m+[0m[0m cpu_threads_per_core                 = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = "ec2-s3-rds-profile"
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t2.micro"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = "sudarshan-tf-key-pair.pem"
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+      [32m+[0m[0m subnet_id                            = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "sudarshan-webserver"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "sudarshan-webserver"
+        }
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = false
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
+
+      [32m+[0m[0m capacity_reservation_specification (known after apply)
+
+      [32m+[0m[0m cpu_options (known after apply)
+
+      [32m+[0m[0m ebs_block_device (known after apply)
+
+      [32m+[0m[0m enclave_options (known after apply)
+
+      [32m+[0m[0m ephemeral_block_device (known after apply)
+
+      [32m+[0m[0m instance_market_options (known after apply)
+
+      [32m+[0m[0m maintenance_options (known after apply)
+
+      [32m+[0m[0m metadata_options (known after apply)
+
+      [32m+[0m[0m network_interface (known after apply)
+
+      [32m+[0m[0m private_dns_name_options (known after apply)
+
+      [32m+[0m[0m root_block_device (known after apply)
+    }
+
+[1m  # module.iam.aws_iam_instance_profile.ec2_instance_profile[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_instance_profile" "ec2_instance_profile" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m create_date = (known after apply)
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "ec2-s3-rds-profile"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m role        = "ec2-s3-rds-role"
+      [32m+[0m[0m tags_all    = (known after apply)
+      [32m+[0m[0m unique_id   = (known after apply)
+    }
+
+[1m  # module.iam.aws_iam_role.role[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "role" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "ec2-s3-rds-role"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+
+      [32m+[0m[0m inline_policy (known after apply)
+    }
+
+[1m  # module.iam.aws_iam_role_policy_attachment.ec2_role_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "ec2_role_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess"
+      [32m+[0m[0m role       = "ec2-s3-rds-role"
+    }
+
+[1m  # module.iam.aws_iam_role_policy_attachment.rds_role_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "rds_role_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
+      [32m+[0m[0m role       = "ec2-s3-rds-role"
+    }
+
+[1m  # module.iam.aws_iam_role_policy_attachment.s3_role_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "s3_role_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+      [32m+[0m[0m role       = "ec2-s3-rds-role"
+    }
+
+[1m  # module.rds.aws_db_instance.default[0m will be created
+[0m  [32m+[0m[0m resource "aws_db_instance" "default" {
+      [32m+[0m[0m address                               = (known after apply)
+      [32m+[0m[0m allocated_storage                     = 20
+      [32m+[0m[0m apply_immediately                     = false
+      [32m+[0m[0m arn                                   = (known after apply)
+      [32m+[0m[0m auto_minor_version_upgrade            = true
+      [32m+[0m[0m availability_zone                     = (known after apply)
+      [32m+[0m[0m backup_retention_period               = (known after apply)
+      [32m+[0m[0m backup_target                         = (known after apply)
+      [32m+[0m[0m backup_window                         = (known after apply)
+      [32m+[0m[0m ca_cert_identifier                    = (known after apply)
+      [32m+[0m[0m character_set_name                    = (known after apply)
+      [32m+[0m[0m copy_tags_to_snapshot                 = false
+      [32m+[0m[0m db_name                               = "SudarshanDevWebAppdb"
+      [32m+[0m[0m db_subnet_group_name                  = (known after apply)
+      [32m+[0m[0m dedicated_log_volume                  = false
+      [32m+[0m[0m delete_automated_backups              = true
+      [32m+[0m[0m domain_fqdn                           = (known after apply)
+      [32m+[0m[0m endpoint                              = (known after apply)
+      [32m+[0m[0m engine                                = "mysql"
+      [32m+[0m[0m engine_lifecycle_support              = (known after apply)
+      [32m+[0m[0m engine_version                        = "5.7"
+      [32m+[0m[0m engine_version_actual                 = (known after apply)
+      [32m+[0m[0m hosted_zone_id                        = (known after apply)
+      [32m+[0m[0m id                                    = (known after apply)
+      [32m+[0m[0m identifier                            = (known after apply)
+      [32m+[0m[0m identifier_prefix                     = (known after apply)
+      [32m+[0m[0m instance_class                        = "db.t3.micro"
+      [32m+[0m[0m iops                                  = (known after apply)
+      [32m+[0m[0m kms_key_id                            = (known after apply)
+      [32m+[0m[0m latest_restorable_time                = (known after apply)
+      [32m+[0m[0m license_model                         = (known after apply)
+      [32m+[0m[0m listener_endpoint                     = (known after apply)
+      [32m+[0m[0m maintenance_window                    = (known after apply)
+      [32m+[0m[0m master_user_secret                    = (known after apply)
+      [32m+[0m[0m master_user_secret_kms_key_id         = (known after apply)
+      [32m+[0m[0m monitoring_interval                   = 0
+      [32m+[0m[0m monitoring_role_arn                   = (known after apply)
+      [32m+[0m[0m multi_az                              = (known after apply)
+      [32m+[0m[0m nchar_character_set_name              = (known after apply)
+      [32m+[0m[0m network_type                          = (known after apply)
+      [32m+[0m[0m option_group_name                     = (known after apply)
+      [32m+[0m[0m parameter_group_name                  = (known after apply)
+      [32m+[0m[0m password                              = (sensitive value)
+      [32m+[0m[0m performance_insights_enabled          = false
+      [32m+[0m[0m performance_insights_kms_key_id       = (known after apply)
+      [32m+[0m[0m performance_insights_retention_period = (known after apply)
+      [32m+[0m[0m port                                  = (known after apply)
+      [32m+[0m[0m publicly_accessible                   = false
+      [32m+[0m[0m replica_mode                          = (known after apply)
+      [32m+[0m[0m replicas                              = (known after apply)
+      [32m+[0m[0m resource_id                           = (known after apply)
+      [32m+[0m[0m skip_final_snapshot                   = false
+      [32m+[0m[0m snapshot_identifier                   = (known after apply)
+      [32m+[0m[0m status                                = (known after apply)
+      [32m+[0m[0m storage_throughput                    = (known after apply)
+      [32m+[0m[0m storage_type                          = (known after apply)
+      [32m+[0m[0m tags                                  = {
+          [32m+[0m[0m "Name" = "database"
+        }
+      [32m+[0m[0m tags_all                              = {
+          [32m+[0m[0m "Name" = "database"
+        }
+      [32m+[0m[0m timezone                              = (known after apply)
+      [32m+[0m[0m username                              = "dbadmin"
+      [32m+[0m[0m vpc_security_group_ids                = (known after apply)
+    }
+
+[1m  # module.s3.aws_iam_instance_profile.ec2_instance_profile[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_instance_profile" "ec2_instance_profile" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m create_date = (known after apply)
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "dev_ec2_instance_profile"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m role        = "EC2-S3-Role"
+      [32m+[0m[0m tags_all    = (known after apply)
+      [32m+[0m[0m unique_id   = (known after apply)
+    }
+
+[1m  # module.s3.aws_s3_bucket.S3_webapp_bucket[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket" "S3_webapp_bucket" {
+      [32m+[0m[0m acceleration_status         = (known after apply)
+      [32m+[0m[0m acl                         = (known after apply)
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m bucket                      = "sudarshan-webapp-dev-s3-bucket"
+      [32m+[0m[0m bucket_domain_name          = (known after apply)
+      [32m+[0m[0m bucket_prefix               = (known after apply)
+      [32m+[0m[0m bucket_regional_domain_name = (known after apply)
+      [32m+[0m[0m force_destroy               = false
+      [32m+[0m[0m hosted_zone_id              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m object_lock_enabled         = (known after apply)
+      [32m+[0m[0m policy                      = (known after apply)
+      [32m+[0m[0m region                      = (known after apply)
+      [32m+[0m[0m request_payer               = (known after apply)
+      [32m+[0m[0m tags                        = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "sudarshan-webapp-dev-s3-bucket"
+        }
+      [32m+[0m[0m tags_all                    = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "sudarshan-webapp-dev-s3-bucket"
+        }
+      [32m+[0m[0m website_domain              = (known after apply)
+      [32m+[0m[0m website_endpoint            = (known after apply)
+
+      [32m+[0m[0m cors_rule (known after apply)
+
+      [32m+[0m[0m grant (known after apply)
+
+      [32m+[0m[0m lifecycle_rule (known after apply)
+
+      [32m+[0m[0m logging (known after apply)
+
+      [32m+[0m[0m object_lock_configuration (known after apply)
+
+      [32m+[0m[0m replication_configuration (known after apply)
+
+      [32m+[0m[0m server_side_encryption_configuration (known after apply)
+
+      [32m+[0m[0m versioning (known after apply)
+
+      [32m+[0m[0m website (known after apply)
+    }
+
+[1m  # module.s3.aws_s3_bucket_policy.s3_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket_policy" "s3_policy" {
+      [32m+[0m[0m bucket = (known after apply)
+      [32m+[0m[0m id     = (known after apply)
+      [32m+[0m[0m policy = (known after apply)
+    }
+
+[1m  # module.vpc.aws_db_subnet_group.Project_db_subnet[0m will be created
+[0m  [32m+[0m[0m resource "aws_db_subnet_group" "Project_db_subnet" {
+      [32m+[0m[0m arn                     = (known after apply)
+      [32m+[0m[0m description             = "Managed by Terraform"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m name                    = "sudarsahan-db-subnet"
+      [32m+[0m[0m name_prefix             = (known after apply)
+      [32m+[0m[0m subnet_ids              = (known after apply)
+      [32m+[0m[0m supported_network_types = (known after apply)
+      [32m+[0m[0m tags                    = {
+          [32m+[0m[0m "Name" = "Sudarshan-DB-Subnet-Group"
+        }
+      [32m+[0m[0m tags_all                = {
+          [32m+[0m[0m "Name" = "Sudarshan-DB-Subnet-Group"
+        }
+      [32m+[0m[0m vpc_id                  = (known after apply)
+    }
+
+[1m  # module.vpc.aws_internet_gateway.Project_igw[0m will be created
+[0m  [32m+[0m[0m resource "aws_internet_gateway" "Project_igw" {
+      [32m+[0m[0m arn      = (known after apply)
+      [32m+[0m[0m id       = (known after apply)
+      [32m+[0m[0m owner_id = (known after apply)
+      [32m+[0m[0m tags     = {
+          [32m+[0m[0m "Name" = "Sudarshan-IGW"
+        }
+      [32m+[0m[0m tags_all = {
+          [32m+[0m[0m "Name" = "Sudarshan-IGW"
+        }
+      [32m+[0m[0m vpc_id   = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table.Project_private_rt[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table" "Project_private_rt" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m owner_id         = (known after apply)
+      [32m+[0m[0m propagating_vgws = (known after apply)
+      [32m+[0m[0m route            = (known after apply)
+      [32m+[0m[0m tags_all         = (known after apply)
+      [32m+[0m[0m vpc_id           = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table.Project_public_rt[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table" "Project_public_rt" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m owner_id         = (known after apply)
+      [32m+[0m[0m propagating_vgws = (known after apply)
+      [32m+[0m[0m route            = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_block                 = "0.0.0.0/0"
+              [32m+[0m[0m gateway_id                 = (known after apply)
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m tags_all         = (known after apply)
+      [32m+[0m[0m vpc_id           = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.Project_private_rt_assoc1[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "Project_private_rt_assoc1" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.Project_private_rt_assoc2[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "Project_private_rt_assoc2" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.Project_public_rt_assoc[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "Project_public_rt_assoc" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_security_group.ec2_sg_ssh[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "ec2_sg_ssh" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Managed by Terraform"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m from_port        = 22
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m from_port        = 80
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m name                   = (known after apply)
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "Name" = "Sudarshan-ec2-ssh-SG"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "Name" = "Sudarshan-ec2-ssh-SG"
+        }
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.vpc.aws_security_group.rds_sg[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "rds_sg" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Managed by Terraform"
+      [32m+[0m[0m egress                 = (known after apply)
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = []
+              [32m+[0m[0m from_port        = 3306
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = (known after apply)
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 3306
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m name                   = (known after apply)
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "Name" = "Sudarshan-RDS-SG"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "Name" = "Sudarshan-RDS-SG"
+        }
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.Project_private_subnet1[0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "Project_private_subnet1" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "us-west-2a"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.2.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = false
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags_all                                       = (known after apply)
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.Project_private_subnet2[0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "Project_private_subnet2" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "us-west-2b"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.3.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = false
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags_all                                       = (known after apply)
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.Project_public_subnet[0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "Project_public_subnet" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "us-west-2a"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.1.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = true
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags_all                                       = (known after apply)
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_vpc.ProjectVPC[0m will be created
+[0m  [32m+[0m[0m resource "aws_vpc" "ProjectVPC" {
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m cidr_block                           = "10.0.0.0/16"
+      [32m+[0m[0m default_network_acl_id               = (known after apply)
+      [32m+[0m[0m default_route_table_id               = (known after apply)
+      [32m+[0m[0m default_security_group_id            = (known after apply)
+      [32m+[0m[0m dhcp_options_id                      = (known after apply)
+      [32m+[0m[0m enable_dns_hostnames                 = (known after apply)
+      [32m+[0m[0m enable_dns_support                   = true
+      [32m+[0m[0m enable_network_address_usage_metrics = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_tenancy                     = "default"
+      [32m+[0m[0m ipv6_association_id                  = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block                      = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_network_border_group = (known after apply)
+      [32m+[0m[0m main_route_table_id                  = (known after apply)
+      [32m+[0m[0m owner_id                             = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name" = "Sudarshan-VPC"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name" = "Sudarshan-VPC"
+        }
+    }
+
+[1mPlan:[0m 25 to add, 0 to change, 0 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m ec2_instance_ids        = (known after apply)
+  [32m+[0m[0m ec2_public_ips          = (known after apply)
+  [32m+[0m[0m private_subnet_ids      = [
+      [32m+[0m[0m (known after apply),
+      [32m+[0m[0m (known after apply),
+    ]
+  [32m+[0m[0m public_subnet_ids       = (known after apply)
+  [32m+[0m[0m rds_endpoint            = (known after apply)
+  [32m+[0m[0m rds_instance_id         = (known after apply)
+  [32m+[0m[0m s3_bucket_name          = "sudarshan-webapp-dev-s3-bucket"
+  [32m+[0m[0m vpc_id                  = (known after apply)
+  [32m+[0m[0m webserver_eip_public_ip = (known after apply)
+[0m[1m
+Do you want to perform these actions in workspace "dev"?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Creating...[0m[0m
+[0m[1mmodule.iam.aws_iam_role.role: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_vpc.ProjectVPC: Creating...[0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Creating...[0m[0m
+[0m[1mmodule.s3.aws_s3_bucket.S3_webapp_bucket: Creating...[0m[0m
+[0m[1mmodule.iam.aws_iam_role.role: Creation complete after 3s [id=ec2-s3-rds-role][0m
+[0m[1mmodule.iam.aws_iam_role_policy_attachment.s3_role_policy: Creating...[0m[0m
+[0m[1mmodule.iam.aws_iam_role_policy_attachment.ec2_role_policy: Creating...[0m[0m
+[0m[1mmodule.iam.aws_iam_role_policy_attachment.rds_role_policy: Creating...[0m[0m
+[0m[1mmodule.iam.aws_iam_instance_profile.ec2_instance_profile: Creating...[0m[0m
+[0m[1mmodule.iam.aws_iam_role_policy_attachment.ec2_role_policy: Creation complete after 1s [id=ec2-s3-rds-role-20240824113916010600000003][0m
+[0m[1mmodule.iam.aws_iam_role_policy_attachment.s3_role_policy: Creation complete after 1s [id=ec2-s3-rds-role-20240824113916010600000002][0m
+[0m[1mmodule.iam.aws_iam_role_policy_attachment.rds_role_policy: Creation complete after 1s [id=ec2-s3-rds-role-20240824113916420200000004][0m
+[0m[1mmodule.iam.aws_iam_instance_profile.ec2_instance_profile: Creation complete after 2s [id=ec2-s3-rds-profile][0m
+[0m[1mmodule.vpc.aws_vpc.ProjectVPC: Creation complete after 5s [id=vpc-0575191f72555b26c][0m
+[0m[1mmodule.vpc.aws_internet_gateway.Project_igw: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_route_table.Project_private_rt: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_subnet.Project_private_subnet1: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_subnet.Project_private_subnet2: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_security_group.ec2_sg_ssh: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_subnet.Project_private_subnet1: Creation complete after 3s [id=subnet-0eb825d5e65d5bfea][0m
+[0m[1mmodule.vpc.aws_subnet.Project_private_subnet2: Creation complete after 3s [id=subnet-0e22d3d1d8de45881][0m
+[0m[1mmodule.vpc.aws_db_subnet_group.Project_db_subnet: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_internet_gateway.Project_igw: Creation complete after 3s [id=igw-0a05a37fb7a4d84e5][0m
+[0m[1mmodule.vpc.aws_route_table.Project_public_rt: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_route_table.Project_private_rt: Creation complete after 3s [id=rtb-09566ab3fb1d132c4][0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_private_rt_assoc2: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_private_rt_assoc1: Creating...[0m[0m
+[0m[1mmodule.s3.aws_s3_bucket.S3_webapp_bucket: Creation complete after 9s [id=sudarshan-webapp-dev-s3-bucket][0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_policy: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_private_rt_assoc2: Creation complete after 2s [id=rtbassoc-032f7c9581290ab04][0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_private_rt_assoc1: Creation complete after 2s [id=rtbassoc-055242c8fe66d5024][0m
+[0m[1mmodule.vpc.aws_db_subnet_group.Project_db_subnet: Creation complete after 2s [id=sudarsahan-db-subnet][0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [10s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [10s elapsed][0m[0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_policy: Creation complete after 2s [id=sudarshan-webapp-dev-s3-bucket][0m
+[0m[1mmodule.vpc.aws_route_table.Project_public_rt: Creation complete after 3s [id=rtb-04890e711fad0d22e][0m
+[0m[1mmodule.vpc.aws_security_group.ec2_sg_ssh: Creation complete after 7s [id=sg-0dc3281a5eb5654f1][0m
+[0m[1mmodule.vpc.aws_security_group.rds_sg: Creating...[0m[0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Still creating... [10s elapsed][0m[0m
+[0m[1mmodule.vpc.aws_security_group.rds_sg: Creation complete after 5s [id=sg-0092148cff6a701cc][0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Creation complete after 14s [id=subnet-0f8b870e686ef5fe4][0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_public_rt_assoc: Creating...[0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Creating...[0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [20s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [20s elapsed][0m[0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_public_rt_assoc: Creation complete after 1s [id=rtbassoc-087cb6b2f00f1b8b7][0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [10s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [30s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [20s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [40s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [30s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [50s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [40s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [1m0s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [1m0s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Provisioning with 'remote-exec'...[0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [1m10s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [1m10s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [1m0s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [1m20s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [1m20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [1m10s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [1m30s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [1m30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [1m20s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [1m40s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [1m40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [1m30s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [1m50s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [1m50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [1m40s elapsed][0m[0m
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Still creating... [2m0s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [2m0s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [1m50s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [2m10s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [2m0s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [2m20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [2m10s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [2m30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [2m20s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [2m40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [2m30s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [2m50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [2m40s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [3m0s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [2m50s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [3m10s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [3m0s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [3m20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [3m10s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [3m30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [3m20s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [3m40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [3m30s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [3m50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [3m40s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [4m0s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [3m50s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [4m10s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [4m0s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Still creating... [4m20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [4m10s elapsed][0m[0m
+[0m[1mmodule.rds.aws_db_instance.default: Creation complete after 4m30s [id=db-N44U2BASHO4RNAPMPPQ3MNNM6Q][0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [4m20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [4m30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [4m40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [4m50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [5m0s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [5m10s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [5m20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [5m30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still creating... [5m40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Host: 35.85.154.37
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  User: ubuntu
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Password: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Private key: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Certificate: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  SSH Agent: true
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mmodule.ec2.aws_instance.webserver (remote-exec):[0m [0m  Target Platform: unix
+module.ec2.aws_instance.webserver (remote-exec): Connected!
+module.ec2.aws_instance.webserver (remote-exec): 0% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+module.ec2.aws_instance.webserver (remote-exec): 0% [Connecting to security.ubuntu.com (
+module.ec2.aws_instance.webserver (remote-exec): Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [Connecting to security.ubuntu.com (
+module.ec2.aws_instance.webserver (remote-exec): Get:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 InRelease 14.2 kB/126 kB 11%]
+module.ec2.aws_instance.webserver (remote-exec): 0% [4 InRelease 14.2 kB/126 kB 11%]
+module.ec2.aws_instance.webserver (remote-exec): Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 Packages 94.2 kB/15.0 MB 1%] [4 I
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 Packages 5960 kB/15.0 MB 40%]
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 Packages 6553 kB/15.0 MB 44%]
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 Packages 13.1 MB/15.0 MB 87%]
+module.ec2.aws_instance.webserver (remote-exec): 0% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe Translation-en [5982 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [5 Packages store 0 B] [6 Translatio
+module.ec2.aws_instance.webserver (remote-exec): 61% [5 Packages store 0 B] [6 Translati
+module.ec2.aws_instance.webserver (remote-exec): Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [323 kB]
+module.ec2.aws_instance.webserver (remote-exec): 72% [5 Packages store 0 B] [6 Translati
+module.ec2.aws_instance.webserver (remote-exec): 72% [5 Packages store 0 B] [7 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 Components [3871 kB]
+module.ec2.aws_instance.webserver (remote-exec): 73% [5 Packages store 0 B] [8 Component
+module.ec2.aws_instance.webserver (remote-exec): Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 c-n-f Metadata [301 kB]
+module.ec2.aws_instance.webserver (remote-exec): 84% [5 Packages store 0 B] [9 Commands-
+module.ec2.aws_instance.webserver (remote-exec): Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [269 kB]
+module.ec2.aws_instance.webserver (remote-exec): 84% [5 Packages store 0 B] [10 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse Translation-en [118 kB]
+module.ec2.aws_instance.webserver (remote-exec): 85% [5 Packages store 0 B] [11 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 Components [35.0 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 c-n-f Metadata [8328 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [463 kB]
+module.ec2.aws_instance.webserver (remote-exec): 86% [5 Packages store 0 B] [14 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [114 kB]
+module.ec2.aws_instance.webserver (remote-exec): 87% [5 Packages store 0 B] [15 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [7192 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [337 kB]
+module.ec2.aws_instance.webserver (remote-exec): 87% [5 Packages store 0 B] [17 Packages
+module.ec2.aws_instance.webserver (remote-exec): 88% [5 Packages store 0 B] [7 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [142 kB]
+module.ec2.aws_instance.webserver (remote-exec): 88% [5 Packages store 0 B] [18 Translat
+module.ec2.aws_instance.webserver (remote-exec): 89% [5 Packages store 0 B] [7 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [45.0 kB]
+module.ec2.aws_instance.webserver (remote-exec): 89% [5 Packages store 0 B] [19 Componen
+module.ec2.aws_instance.webserver (remote-exec): Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [13.6 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [280 kB]
+module.ec2.aws_instance.webserver (remote-exec): 89% [5 Packages store 0 B] [21 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [54.8 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [22 Translat
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [22 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [14.1 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [3608 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [212 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [532 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 c-n-f Metadata [112 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [10.3 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [29 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [10.5 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [17.6 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:32 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1016 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:33 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:34 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 c-n-f Metadata [116 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:35 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:36 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 c-n-f Metadata [116 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:37 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [73.1 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [37 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:38 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [4220 B]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [38 Commands
+module.ec2.aws_instance.webserver (remote-exec): Get:39 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [252 kB]
+module.ec2.aws_instance.webserver (remote-exec): 90% [5 Packages store 0 B] [39 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:40 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [109 kB]
+module.ec2.aws_instance.webserver (remote-exec): 91% [5 Packages store 0 B] [40 Translat
+module.ec2.aws_instance.webserver (remote-exec): Get:41 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [8632 B]
+module.ec2.aws_instance.webserver (remote-exec): 91% [5 Packages store 0 B] [41 Componen
+module.ec2.aws_instance.webserver (remote-exec): Get:42 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [9756 B]
+module.ec2.aws_instance.webserver (remote-exec): 91% [5 Packages store 0 B] [42 Commands
+module.ec2.aws_instance.webserver (remote-exec): Get:43 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [280 kB]
+module.ec2.aws_instance.webserver (remote-exec): 91% [5 Packages store 0 B] [43 Packages
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:44 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [54.8 kB]
+module.ec2.aws_instance.webserver (remote-exec): Get:45 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [10.6 kB]
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B] [45 Packages
+module.ec2.aws_instance.webserver (remote-exec): Get:46 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [2808 B]
+module.ec2.aws_instance.webserver (remote-exec): Get:47 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B] [Waiting for
+module.ec2.aws_instance.webserver (remote-exec): Get:48 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [344 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 92% [5 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [6 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [6 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [8 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [8 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [8 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [9 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [10 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [11 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 93% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 93% [12 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [13 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [14 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [15 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [16 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [17 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 94% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 94% [18 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [19 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [20 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [21 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [7 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 95% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 95% [22 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [23 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [24 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [25 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 96% [27 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 96% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [29 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [30 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [31 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [32 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 97% [34 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [36 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [37 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [38 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [39 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 98% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 98% [40 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [41 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [42 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [43 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [44 Translation-en store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 99% [45 Packages store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 99% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 100% [47 Components-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): 100% [48 Commands-amd64 store 0 B]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Fetched 28.6 MB in 6s (5003 kB/s)
+module.ec2.aws_instance.webserver: Still creating... [1m0s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 5%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 5%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 7%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 7%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 61%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 61%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 66%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 85%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 86%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 86%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 87%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 87%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 89%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 89%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 90%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 90%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 91%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 93%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 94%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 95%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 95%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 96%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 96%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 97%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 98%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 98%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 99%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... Done
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... 100%
+module.ec2.aws_instance.webserver (remote-exec): Reading package lists... Done
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 0%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 0%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 50%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... 50%
+module.ec2.aws_instance.webserver (remote-exec): Building dependency tree... Done
+module.ec2.aws_instance.webserver (remote-exec): Reading state information... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading state information... 0%
+module.ec2.aws_instance.webserver (remote-exec): Reading state information... Done
+module.ec2.aws_instance.webserver (remote-exec): The following additional packages will be installed:
+module.ec2.aws_instance.webserver (remote-exec):   apache2-bin apache2-data
+module.ec2.aws_instance.webserver (remote-exec):   apache2-utils libapr1t64
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-dbd-sqlite3
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-ldap libaprutil1t64
+module.ec2.aws_instance.webserver (remote-exec):   liblua5.4-0 ssl-cert
+module.ec2.aws_instance.webserver (remote-exec): Suggested packages:
+module.ec2.aws_instance.webserver (remote-exec):   apache2-doc apache2-suexec-pristine
+module.ec2.aws_instance.webserver (remote-exec):   | apache2-suexec-custom www-browser
+module.ec2.aws_instance.webserver (remote-exec): The following NEW packages will be installed:
+module.ec2.aws_instance.webserver (remote-exec):   apache2 apache2-bin apache2-data
+module.ec2.aws_instance.webserver (remote-exec):   apache2-utils libapr1t64
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-dbd-sqlite3
+module.ec2.aws_instance.webserver (remote-exec):   libaprutil1-ldap libaprutil1t64
+module.ec2.aws_instance.webserver (remote-exec):   liblua5.4-0 ssl-cert
+module.ec2.aws_instance.webserver (remote-exec): 0 upgraded, 10 newly installed, 0 to remove and 86 not upgraded.
+module.ec2.aws_instance.webserver (remote-exec): Need to get 2083 kB of archives.
+module.ec2.aws_instance.webserver (remote-exec): After this operation, 8094 kB of additional disk space will be used.
+module.ec2.aws_instance.webserver (remote-exec): 0% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libapr1t64 amd64 1.7.2-3.1build2 [107 kB]
+module.ec2.aws_instance.webserver (remote-exec): 0% [1 libapr1t64 0 B/107 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 6% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7 [91.9 kB]
+module.ec2.aws_instance.webserver (remote-exec): 6% [2 libaprutil1t64 0 B/91.9 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 12% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7 [11.2 kB]
+module.ec2.aws_instance.webserver (remote-exec): 14% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7 [9116 B]
+module.ec2.aws_instance.webserver (remote-exec): 16% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+module.ec2.aws_instance.webserver: Still creating... [1m10s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): 20% [5 liblua5.4-0 105 kB/166 kB 63%]
+module.ec2.aws_instance.webserver (remote-exec): 25% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.4 [1329 kB]
+module.ec2.aws_instance.webserver (remote-exec): 25% [6 apache2-bin 0 B/1329 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 78% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.4 [163 kB]
+module.ec2.aws_instance.webserver (remote-exec): 78% [7 apache2-data 0 B/163 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 86% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.4 [97.1 kB]
+module.ec2.aws_instance.webserver (remote-exec): 86% [8 apache2-utils 0 B/97.1 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 92% [Waiting for headers]
+module.ec2.aws_instance.webserver (remote-exec): Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.4 [90.2 kB]
+module.ec2.aws_instance.webserver (remote-exec): 93% [9 apache2 26.1 kB/90.2 kB 29%]
+module.ec2.aws_instance.webserver (remote-exec): 97% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+module.ec2.aws_instance.webserver (remote-exec): 97% [10 ssl-cert 0 B/17.8 kB 0%]
+module.ec2.aws_instance.webserver (remote-exec): 100% [Working]
+module.ec2.aws_instance.webserver (remote-exec): Fetched 2083 kB in 0s (5932 kB/s)
+module.ec2.aws_instance.webserver (remote-exec): Preconfiguring packages ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libapr1t64:amd64.
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ...
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 5%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 10%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 15%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 20%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 25%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 30%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 35%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 40%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 45%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 50%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 55%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 60%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 65%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 70%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 75%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 80%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 85%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 90%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 95%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 100%
+module.ec2.aws_instance.webserver (remote-exec): (Reading database ... 67741 files and directories currently installed.)
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../0-libapr1t64_1.7.2-3.1build2_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libapr1t64:amd64 (1.7.2-3.1build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libaprutil1t64:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../1-libaprutil1t64_1.6.3-1.1ubuntu7_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package libaprutil1-ldap:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../3-libaprutil1-ldap_1.6.3-1.1ubuntu7_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package liblua5.4-0:amd64.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../4-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking liblua5.4-0:amd64 (5.4.6-3build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2-bin.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../5-apache2-bin_2.4.58-1ubuntu8.4_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2-bin (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2-data.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../6-apache2-data_2.4.58-1ubuntu8.4_all.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2-data (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2-utils.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../7-apache2-utils_2.4.58-1ubuntu8.4_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2-utils (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package apache2.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../8-apache2_2.4.58-1ubuntu8.4_amd64.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking apache2 (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Selecting previously unselected package ssl-cert.
+module.ec2.aws_instance.webserver (remote-exec): Preparing to unpack .../9-ssl-cert_1.1.2ubuntu1_all.deb ...
+module.ec2.aws_instance.webserver (remote-exec): Unpacking ssl-cert (1.1.2ubuntu1) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up ssl-cert (1.1.2ubuntu1) ...
+module.ec2.aws_instance.webserver (remote-exec): Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+module.ec2.aws_instance.webserver (remote-exec): Setting up libapr1t64:amd64 (1.7.2-3.1build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up liblua5.4-0:amd64 (5.4.6-3build2) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2-data (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2-utils (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2-bin (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Setting up apache2 (2.4.58-1ubuntu8.4) ...
+module.ec2.aws_instance.webserver (remote-exec): Enabling module mpm_event.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authz_core.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authz_host.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authn_core.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module auth_basic.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module access_compat.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authn_file.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module authz_user.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module alias.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module dir.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module autoindex.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module env.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module mime.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module negotiation.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module setenvif.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module filter.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module deflate.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module status.
+module.ec2.aws_instance.webserver (remote-exec): Enabling module reqtimeout.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf charset.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf localized-error-pages.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf other-vhosts-access-log.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf security.
+module.ec2.aws_instance.webserver (remote-exec): Enabling conf serve-cgi-bin.
+module.ec2.aws_instance.webserver (remote-exec): Enabling site 000-default.
+module.ec2.aws_instance.webserver (remote-exec): Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /usr/lib/systemd/system/apache2.service.
+module.ec2.aws_instance.webserver (remote-exec): Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /usr/lib/systemd/system/apache-htcacheclean.service.
+module.ec2.aws_instance.webserver (remote-exec): Processing triggers for ufw (0.36.2-6) ...
+module.ec2.aws_instance.webserver (remote-exec): Processing triggers for man-db (2.12.0-4build2) ...
+module.ec2.aws_instance.webserver: Still creating... [1m20s elapsed]
+module.ec2.aws_instance.webserver (remote-exec): Processing triggers for libc-bin (2.39-0ubuntu8.2) ...
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [                ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=               ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==              ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [====            ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=====           ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [======          ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=======         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [========        ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=========       ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==========      ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [===========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [============    ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============   ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [==============  ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [=============== ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes... [================]
+module.ec2.aws_instance.webserver (remote-exec): Scanning processes...
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [             ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [====         ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [========     ]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images... [=============]
+module.ec2.aws_instance.webserver (remote-exec): Scanning linux images...
+
+module.ec2.aws_instance.webserver (remote-exec): Running kernel seems to be up-to-date.
+
+module.ec2.aws_instance.webserver (remote-exec): No services need to be restarted.
+
+module.ec2.aws_instance.webserver (remote-exec): No containers need to be restarted.
+
+module.ec2.aws_instance.webserver (remote-exec): No user sessions are running outdated
+module.ec2.aws_instance.webserver (remote-exec):  binaries.
+
+module.ec2.aws_instance.webserver (remote-exec): No VM guests are running outdated
+module.ec2.aws_instance.webserver (remote-exec):  hypervisor (qemu) binaries on this
+module.ec2.aws_instance.webserver (remote-exec):  host.
+module.ec2.aws_instance.webserver (remote-exec): Synchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+module.ec2.aws_instance.webserver (remote-exec): Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+module.ec2.aws_instance.webserver: Provisioning with 'local-exec'...
+module.ec2.aws_instance.webserver (local-exec): Executing: ["/bin/sh" "-c" "echo 'Apache installation initiated on 35.85.155.243'"]
+module.ec2.aws_instance.webserver (local-exec): Apache installation initiated on 35.85.155.243
+module.ec2.aws_instance.webserver: Creation complete after 1m25s [id=i-0306c8df3cc6ecbdf]
+module.ec2.aws_eip.webserver_eip: Creating...
+module.ec2.aws_eip.webserver_eip: Creation complete after 4s [id=eipalloc-07101d8081069c64c]
+module.ec2.aws_eip_association.webserver_eip_assoc: Creating...
+module.ec2.aws_eip_association.webserver_eip_assoc: Creation complete after 3s [id=eipassoc-088b428a608f9d141]
+Releasing state lock. This may take a few moments...
+
+Apply complete! Resources: 4 added, 1 changed, 2 destroyed.
+
+Outputs:
+
+ec2_instance_ids = "i-0306c8df3cc6ecbdf"
+ec2_public_ips = "35.85.155.243"
+private_subnet_ids = [
+  "subnet-0eb825d5e65d5bfea",
+  "subnet-0e22d3d1d8de45881",
+]
+public_subnet_ids = "subnet-0f8b870e686ef5fe4"
+rds_endpoint = "terraform-20240824113913339700000001.cngkowgac7lz.us-west-2.rds.amazonaws.com:3306"
+rds_instance_id = "db-N44U2BASHO4RNAPMPPQ3MNNM6Q"
+s3_bucket_name = "sudarshan-webapp-dev-s3-bucket"
+vpc_id = "vpc-0575191f72555b26c"
+webserver_eip_public_ip = "44.228.75.28"
