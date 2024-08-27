@@ -1,0 +1,63 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:326151034032:task-definition/backend-task:3",
+    "containerDefinitions": [
+        {
+            "name": "backend",
+            "image": "daradesudarshan/centralrepo:flask-backend-mysql-v1",
+            "cpu": 256,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 5000,
+                    "hostPort": 5000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                    {
+                    "name":"DB_HOST",
+                    "value": "mysql"
+                    },
+                    {
+                    "name":"DB_USER",
+                    "value": "admin"
+                    },
+                    {
+                    "name":"DB_NAME",
+                    "value": "appdatabase"
+                    }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "backend-task",
+    "executionRoleArn": "arn:aws:iam::326151034032:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 3,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2024-08-26T16:45:16.881Z",
+    "registeredBy": "arn:aws:iam::326151034032:user/lab_user",
+    "tags": []
+}

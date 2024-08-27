@@ -1,0 +1,50 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:326151034032:task-definition/frontend-task:3",
+    "containerDefinitions": [
+        {
+            "name": "frontend",
+            "image": "daradesudarshan/centralrepo:nginx-frontend-flask-v1",
+            "cpu": 256,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "frontend-task",
+    "executionRoleArn": "arn:aws:iam::326151034032:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 3,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2024-08-26T16:45:17.172Z",
+    "registeredBy": "arn:aws:iam::326151034032:user/lab_user",
+    "tags": []
+}
