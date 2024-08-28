@@ -183,5 +183,22 @@ Grafana provides a set of pre-configured dashboards for Prometheus. To import th
 
 ![alt text](img/image16.png)
 
+
+Additionally we can add volumes for Prometheus and grafana:
+
+```bash 
+kubectl apply -f grafana-pv.yaml
+kubectl apply -f grafana-pvc.yaml
+kubectl apply -f prometheus-pvc.yaml
+kubectl apply -f prometheus-pvc.yaml
+```
+- Update Prometheus to use the persistent storage:
+```bash
+helm upgrade prometheus prometheus-community/prometheus --set server.persistentVolume.enabled=true --set server.persistentVolume.storageClass=local-storage --set server.persistentVolume.existingClaim=prometheus-pvc 
+```
+- Update Grafana to use the persistent storage:
+```bash
+helm upgrade grafana grafana/grafana --set persistence.enabled=true,persistence.storageClassName="local-storage",persistence.existingClaim="grafana-pvc" 
+```
 # Conclusion
 You have successfully deployed Prometheus and Grafana on your Kubernetes cluster using Helm charts. You can now monitor your cluster and applications using these tools. For further customization and configuration, refer to the Prometheus Helm chart documentation and the Grafana Helm chart documentation.
