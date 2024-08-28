@@ -12,10 +12,10 @@ service:
   targetPort: 3000
 
 mysql:
-  host: "webappdatabase.cdw6myo0oi1c.us-west-2.rds.amazonaws.com"
+  host: ""
   port: "3306"
-  user: "admin"
-  password: "webappadmin"
+  user: ""
+  password: ""
 
 resources: {}
 
