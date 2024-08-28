@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: daradesudarshan/centralrepo
+  tag: node-app-v4
+  pullPolicy: IfNotPresent
+
+service:
+  name: backend-service
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+mysql:
+  host: "webappdatabase.cdw6myo0oi1c.us-west-2.rds.amazonaws.com"
+  port: "3306"
+  user: "admin"
+  password: "webappadmin"
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
