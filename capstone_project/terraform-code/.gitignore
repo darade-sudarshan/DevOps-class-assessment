@@ -1,0 +1,4 @@
+*.tfstate
+*.tfstate.*
+.terraform/
+k8s-sudarshan.pem

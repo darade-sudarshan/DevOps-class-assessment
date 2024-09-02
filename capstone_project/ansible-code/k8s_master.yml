@@ -1,0 +1,4 @@
+- hosts: role_master
+  roles:
+          - role: k8s_master
+

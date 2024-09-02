@@ -1,0 +1,19 @@
+plugin: aws_ec2
+regions:
+- ap-northeast-1
+#aws_access_key:
+#aws_secret_key:
+filters:
+  instance-state-name:
+  - running
+  tag:role:
+  - "master"
+  - "worker"
+
+hostnames:
+- ip-address
+
+keyed_groups:
+- key: tags.role
+  prefix: role
+  separator: "_"
