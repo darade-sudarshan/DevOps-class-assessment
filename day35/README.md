@@ -163,6 +163,7 @@ You should now deploy a pod network to the cluster
 ![alt text](img/image9.png)
 
 - Verify that the cluster is working by deploying a sample application (e.g., Nginx).
+
 ![alt text](img/image10.png)
 
 - install CNI plugin on master node:
@@ -231,6 +232,8 @@ kubectl port-forward service/prometheus-server 9090:80 --namespace monitoring
 ```
 - Verify that Prometheus is collecting metrics from the Kubernetes cluster.
 
+![alt text](img/image18.png)
+![alt text](img/image19.png)
 ### 4. Deploy Grafana on Kubernetes (20 Minutes)
 
 - Deploy Grafana in the monitoring namespace.
@@ -269,21 +272,37 @@ To access the Grafana dashboard, you need to set up port forwarding.
 ```bash
 kubectl port-forward service/grafana 3000:80 --namespace monitoring
 ```
+
 Open your browser and navigate to http://localhost:3000. The default username is admin, and the password can be retrieved with the following command:
 ```bash
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
+![alt text](img/image17.png)
 
 - Configure Grafana to use Prometheus as a data source.
 
 1. Log in to Grafana.
+
+
 2. Click on the gear icon (⚙️) to go to Configuration and select Data Sources.
+
 3. Click on Add data source.
+
+![alt text](img/image20.png)
+
 4. Choose Prometheus from the list.
 5. In the HTTP section, set the URL to http://prometheus-server.monitoring.svc.cluster.local.
+
+![alt text](img/image21.png)
+
 6. Click Save & Test to verify the connection.
 
+![alt text](img/image22.png)
+![alt text](img/image23.png)
+
 - Verify that Grafana can visualize metrics from Prometheus.
+
+![alt text](img/image26.png)
 
 ### 5. Create and Configure Custom Dashboards (20 Minutes)
 
