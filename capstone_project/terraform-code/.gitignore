@@ -1,3 +1,7 @@
 *.tfstate
 *.tfstate.*
 .terraform/
+<<<<<<< HEAD
+=======
+k8s-sudarshan.pem
+>>>>>>> refs/remotes/origin/main

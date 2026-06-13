@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 - hosts: master
+=======
+- hosts: role_master
+>>>>>>> refs/remotes/origin/main
   roles:
           - role: k8s_master
 

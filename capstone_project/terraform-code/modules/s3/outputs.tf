@@ -8,7 +8,14 @@ output "bucket_name" {
   value       = aws_s3_bucket.S3_webapp_bucket.bucket
 }
 
+<<<<<<< HEAD
 output "iam_ec2_profile_name" {
   description = "name of the ec2 instance profle name"
   value       = aws_iam_instance_profile.ec2_instance_profile.name
 }
+=======
+# output "iam_ec2_profile_name" {
+#   description = "name of the ec2 instance profle name"
+#   value       = aws_iam_instance_profile.ec2_instance_profile.name
+# }
+>>>>>>> refs/remotes/origin/main

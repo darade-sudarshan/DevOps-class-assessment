@@ -10,7 +10,11 @@ resource "aws_subnet" "Project_public_subnet" {
   vpc_id                  = aws_vpc.ProjectVPC.id
   cidr_block              = var.public_subnet_cidr_ip
   map_public_ip_on_launch = true
+<<<<<<< HEAD
   availability_zone = "us-west-2a"
+=======
+  availability_zone = "ap-northeast-1a"
+>>>>>>> refs/remotes/origin/main
 }
 # Create a route table for the public subnet
 resource "aws_route_table" "Project_public_rt" {
@@ -31,7 +35,11 @@ resource "aws_subnet" "Project_private_subnet" {
   vpc_id                  = aws_vpc.ProjectVPC.id
   cidr_block              = var.private_subnet_cidr_ip
   map_public_ip_on_launch = false
+<<<<<<< HEAD
   availability_zone = "us-west-2b"
+=======
+  availability_zone = "ap-northeast-1c"
+>>>>>>> refs/remotes/origin/main
 }
 # Create a route table for the private subnet
 resource "aws_route_table" "Project_private_rt" {

@@ -1,0 +1,479 @@
+{
+    "_meta": {
+        "hostvars": {
+            "13.115.178.123": {
+                "ami_launch_index": 0,
+                "architecture": "x86_64",
+                "block_device_mappings": [
+                    {
+                        "device_name": "/dev/sda1",
+                        "ebs": {
+                            "attach_time": "2024-09-02T07:23:40+00:00",
+                            "delete_on_termination": true,
+                            "status": "attached",
+                            "volume_id": "vol-0f7c2c47f7c9ab636"
+                        }
+                    }
+                ],
+                "boot_mode": "uefi-preferred",
+                "capacity_reservation_specification": {
+                    "capacity_reservation_preference": "open"
+                },
+                "client_token": "d9c33b34-41f6-4c42-a940-8ea5be7be15e",
+                "cpu_options": {
+                    "core_count": 1,
+                    "threads_per_core": 1
+                },
+                "current_instance_boot_mode": "legacy-bios",
+                "ebs_optimized": false,
+                "ena_support": true,
+                "enclave_options": {
+                    "enabled": false
+                },
+                "hibernation_options": {
+                    "configured": false
+                },
+                "hypervisor": "xen",
+                "image_id": "ami-0cab37bd176bb80d3",
+                "instance_id": "i-0c98480a895027891",
+                "instance_type": "t2.micro",
+                "key_name": "k8s-sudarshan",
+                "launch_time": "2024-09-02T07:23:39+00:00",
+                "maintenance_options": {
+                    "auto_recovery": "default"
+                },
+                "metadata_options": {
+                    "http_endpoint": "enabled",
+                    "http_protocol_ipv6": "disabled",
+                    "http_put_response_hop_limit": 2,
+                    "http_tokens": "required",
+                    "instance_metadata_tags": "disabled",
+                    "state": "applied"
+                },
+                "monitoring": {
+                    "state": "disabled"
+                },
+                "network_interfaces": [
+                    {
+                        "association": {
+                            "ip_owner_id": "amazon",
+                            "public_dns_name": "",
+                            "public_ip": "13.115.178.123"
+                        },
+                        "attachment": {
+                            "attach_time": "2024-09-02T07:23:39+00:00",
+                            "attachment_id": "eni-attach-0a63dae74cc96252c",
+                            "delete_on_termination": true,
+                            "device_index": 0,
+                            "network_card_index": 0,
+                            "status": "attached"
+                        },
+                        "description": "",
+                        "groups": [
+                            {
+                                "group_id": "sg-0128dd3d8be54b82c",
+                                "group_name": "terraform-20240902063203994500000003"
+                            },
+                            {
+                                "group_id": "sg-069f3c7a4ae9b3587",
+                                "group_name": "terraform-20240902063203980600000002"
+                            }
+                        ],
+                        "interface_type": "interface",
+                        "ipv6_addresses": [],
+                        "mac_address": "06:d0:f3:37:a1:11",
+                        "network_interface_id": "eni-0c5e233dbc6e6eef4",
+                        "owner_id": "326151034032",
+                        "private_ip_address": "10.0.1.146",
+                        "private_ip_addresses": [
+                            {
+                                "association": {
+                                    "ip_owner_id": "amazon",
+                                    "public_dns_name": "",
+                                    "public_ip": "13.115.178.123"
+                                },
+                                "primary": true,
+                                "private_ip_address": "10.0.1.146"
+                            }
+                        ],
+                        "source_dest_check": true,
+                        "status": "in-use",
+                        "subnet_id": "subnet-0f1eb85832172b48c",
+                        "vpc_id": "vpc-058fbf1eb9e25c0b7"
+                    }
+                ],
+                "owner_id": "326151034032",
+                "placement": {
+                    "availability_zone": "ap-northeast-1a",
+                    "group_name": "",
+                    "region": "ap-northeast-1",
+                    "tenancy": "default"
+                },
+                "platform_details": "Linux/UNIX",
+                "private_dns_name": "ip-10-0-1-146.ap-northeast-1.compute.internal",
+                "private_dns_name_options": {
+                    "enable_resource_name_dns_a_record": false,
+                    "enable_resource_name_dns_aaaa_record": false,
+                    "hostname_type": "ip-name"
+                },
+                "private_ip_address": "10.0.1.146",
+                "product_codes": [],
+                "public_dns_name": "",
+                "public_ip_address": "13.115.178.123",
+                "requester_id": "",
+                "reservation_id": "r-0dcb7ad726b7341ac",
+                "root_device_name": "/dev/sda1",
+                "root_device_type": "ebs",
+                "security_groups": [
+                    {
+                        "group_id": "sg-0128dd3d8be54b82c",
+                        "group_name": "terraform-20240902063203994500000003"
+                    },
+                    {
+                        "group_id": "sg-069f3c7a4ae9b3587",
+                        "group_name": "terraform-20240902063203980600000002"
+                    }
+                ],
+                "source_dest_check": true,
+                "state": {
+                    "code": 16,
+                    "name": "running"
+                },
+                "state_transition_reason": "",
+                "subnet_id": "subnet-0f1eb85832172b48c",
+                "tags": {
+                    "Name": "k8s-sudarshan-worker01",
+                    "role": "worker"
+                },
+                "usage_operation": "RunInstances",
+                "usage_operation_update_time": "2024-09-02T07:23:39+00:00",
+                "virtualization_type": "hvm",
+                "vpc_id": "vpc-058fbf1eb9e25c0b7"
+            },
+            "43.207.236.164": {
+                "ami_launch_index": 0,
+                "architecture": "x86_64",
+                "block_device_mappings": [
+                    {
+                        "device_name": "/dev/sda1",
+                        "ebs": {
+                            "attach_time": "2024-09-02T07:39:16+00:00",
+                            "delete_on_termination": true,
+                            "status": "attached",
+                            "volume_id": "vol-0fb44aa390ec09077"
+                        }
+                    }
+                ],
+                "boot_mode": "uefi-preferred",
+                "capacity_reservation_specification": {
+                    "capacity_reservation_preference": "open"
+                },
+                "client_token": "074aee2f-e32e-410d-bc61-1bc21b63ae8b",
+                "cpu_options": {
+                    "core_count": 2,
+                    "threads_per_core": 1
+                },
+                "current_instance_boot_mode": "legacy-bios",
+                "ebs_optimized": false,
+                "ena_support": true,
+                "enclave_options": {
+                    "enabled": false
+                },
+                "hibernation_options": {
+                    "configured": false
+                },
+                "hypervisor": "xen",
+                "image_id": "ami-0cab37bd176bb80d3",
+                "instance_id": "i-0fa82c52e15f5aacb",
+                "instance_type": "t2.medium",
+                "key_name": "k8s-sudarshan",
+                "launch_time": "2024-09-02T07:39:16+00:00",
+                "maintenance_options": {
+                    "auto_recovery": "default"
+                },
+                "metadata_options": {
+                    "http_endpoint": "enabled",
+                    "http_protocol_ipv6": "disabled",
+                    "http_put_response_hop_limit": 2,
+                    "http_tokens": "required",
+                    "instance_metadata_tags": "disabled",
+                    "state": "applied"
+                },
+                "monitoring": {
+                    "state": "disabled"
+                },
+                "network_interfaces": [
+                    {
+                        "association": {
+                            "ip_owner_id": "amazon",
+                            "public_dns_name": "",
+                            "public_ip": "43.207.236.164"
+                        },
+                        "attachment": {
+                            "attach_time": "2024-09-02T07:39:16+00:00",
+                            "attachment_id": "eni-attach-0711d52d1797fd4f3",
+                            "delete_on_termination": true,
+                            "device_index": 0,
+                            "network_card_index": 0,
+                            "status": "attached"
+                        },
+                        "description": "",
+                        "groups": [
+                            {
+                                "group_id": "sg-0128dd3d8be54b82c",
+                                "group_name": "terraform-20240902063203994500000003"
+                            },
+                            {
+                                "group_id": "sg-069f3c7a4ae9b3587",
+                                "group_name": "terraform-20240902063203980600000002"
+                            }
+                        ],
+                        "interface_type": "interface",
+                        "ipv6_addresses": [],
+                        "mac_address": "06:46:20:7c:9f:81",
+                        "network_interface_id": "eni-0a6eb1f8d49b892e6",
+                        "owner_id": "326151034032",
+                        "private_ip_address": "10.0.1.178",
+                        "private_ip_addresses": [
+                            {
+                                "association": {
+                                    "ip_owner_id": "amazon",
+                                    "public_dns_name": "",
+                                    "public_ip": "43.207.236.164"
+                                },
+                                "primary": true,
+                                "private_ip_address": "10.0.1.178"
+                            }
+                        ],
+                        "source_dest_check": true,
+                        "status": "in-use",
+                        "subnet_id": "subnet-0f1eb85832172b48c",
+                        "vpc_id": "vpc-058fbf1eb9e25c0b7"
+                    }
+                ],
+                "owner_id": "326151034032",
+                "placement": {
+                    "availability_zone": "ap-northeast-1a",
+                    "group_name": "",
+                    "region": "ap-northeast-1",
+                    "tenancy": "default"
+                },
+                "platform_details": "Linux/UNIX",
+                "private_dns_name": "ip-10-0-1-178.ap-northeast-1.compute.internal",
+                "private_dns_name_options": {
+                    "enable_resource_name_dns_a_record": false,
+                    "enable_resource_name_dns_aaaa_record": false,
+                    "hostname_type": "ip-name"
+                },
+                "private_ip_address": "10.0.1.178",
+                "product_codes": [],
+                "public_dns_name": "",
+                "public_ip_address": "43.207.236.164",
+                "requester_id": "",
+                "reservation_id": "r-0b6e10856d2c06014",
+                "root_device_name": "/dev/sda1",
+                "root_device_type": "ebs",
+                "security_groups": [
+                    {
+                        "group_id": "sg-0128dd3d8be54b82c",
+                        "group_name": "terraform-20240902063203994500000003"
+                    },
+                    {
+                        "group_id": "sg-069f3c7a4ae9b3587",
+                        "group_name": "terraform-20240902063203980600000002"
+                    }
+                ],
+                "source_dest_check": true,
+                "state": {
+                    "code": 16,
+                    "name": "running"
+                },
+                "state_transition_reason": "",
+                "subnet_id": "subnet-0f1eb85832172b48c",
+                "tags": {
+                    "Name": "k8s-sudarshan-controlplane",
+                    "role": "master"
+                },
+                "usage_operation": "RunInstances",
+                "usage_operation_update_time": "2024-09-02T07:39:16+00:00",
+                "virtualization_type": "hvm",
+                "vpc_id": "vpc-058fbf1eb9e25c0b7"
+            },
+            "52.198.107.241": {
+                "ami_launch_index": 0,
+                "architecture": "x86_64",
+                "block_device_mappings": [
+                    {
+                        "device_name": "/dev/sda1",
+                        "ebs": {
+                            "attach_time": "2024-09-02T07:40:23+00:00",
+                            "delete_on_termination": true,
+                            "status": "attached",
+                            "volume_id": "vol-0d0c695e52aa67d4d"
+                        }
+                    }
+                ],
+                "boot_mode": "uefi-preferred",
+                "capacity_reservation_specification": {
+                    "capacity_reservation_preference": "open"
+                },
+                "client_token": "a7b23178-a404-409b-be08-822f0b2a86b6",
+                "cpu_options": {
+                    "core_count": 1,
+                    "threads_per_core": 1
+                },
+                "current_instance_boot_mode": "legacy-bios",
+                "ebs_optimized": false,
+                "ena_support": true,
+                "enclave_options": {
+                    "enabled": false
+                },
+                "hibernation_options": {
+                    "configured": false
+                },
+                "hypervisor": "xen",
+                "image_id": "ami-0cab37bd176bb80d3",
+                "instance_id": "i-09fc53d95c34a2a9c",
+                "instance_type": "t2.micro",
+                "key_name": "k8s-sudarshan",
+                "launch_time": "2024-09-02T07:40:23+00:00",
+                "maintenance_options": {
+                    "auto_recovery": "default"
+                },
+                "metadata_options": {
+                    "http_endpoint": "enabled",
+                    "http_protocol_ipv6": "disabled",
+                    "http_put_response_hop_limit": 2,
+                    "http_tokens": "required",
+                    "instance_metadata_tags": "disabled",
+                    "state": "applied"
+                },
+                "monitoring": {
+                    "state": "disabled"
+                },
+                "network_interfaces": [
+                    {
+                        "association": {
+                            "ip_owner_id": "amazon",
+                            "public_dns_name": "",
+                            "public_ip": "52.198.107.241"
+                        },
+                        "attachment": {
+                            "attach_time": "2024-09-02T07:40:23+00:00",
+                            "attachment_id": "eni-attach-0f482f011469e9722",
+                            "delete_on_termination": true,
+                            "device_index": 0,
+                            "network_card_index": 0,
+                            "status": "attached"
+                        },
+                        "description": "",
+                        "groups": [
+                            {
+                                "group_id": "sg-0128dd3d8be54b82c",
+                                "group_name": "terraform-20240902063203994500000003"
+                            },
+                            {
+                                "group_id": "sg-069f3c7a4ae9b3587",
+                                "group_name": "terraform-20240902063203980600000002"
+                            }
+                        ],
+                        "interface_type": "interface",
+                        "ipv6_addresses": [],
+                        "mac_address": "06:84:38:5e:88:6f",
+                        "network_interface_id": "eni-0e668c9583a57f9a2",
+                        "owner_id": "326151034032",
+                        "private_ip_address": "10.0.1.18",
+                        "private_ip_addresses": [
+                            {
+                                "association": {
+                                    "ip_owner_id": "amazon",
+                                    "public_dns_name": "",
+                                    "public_ip": "52.198.107.241"
+                                },
+                                "primary": true,
+                                "private_ip_address": "10.0.1.18"
+                            }
+                        ],
+                        "source_dest_check": true,
+                        "status": "in-use",
+                        "subnet_id": "subnet-0f1eb85832172b48c",
+                        "vpc_id": "vpc-058fbf1eb9e25c0b7"
+                    }
+                ],
+                "owner_id": "326151034032",
+                "placement": {
+                    "availability_zone": "ap-northeast-1a",
+                    "group_name": "",
+                    "region": "ap-northeast-1",
+                    "tenancy": "default"
+                },
+                "platform_details": "Linux/UNIX",
+                "private_dns_name": "ip-10-0-1-18.ap-northeast-1.compute.internal",
+                "private_dns_name_options": {
+                    "enable_resource_name_dns_a_record": false,
+                    "enable_resource_name_dns_aaaa_record": false,
+                    "hostname_type": "ip-name"
+                },
+                "private_ip_address": "10.0.1.18",
+                "product_codes": [],
+                "public_dns_name": "",
+                "public_ip_address": "52.198.107.241",
+                "requester_id": "",
+                "reservation_id": "r-0b7149fd579cff7ad",
+                "root_device_name": "/dev/sda1",
+                "root_device_type": "ebs",
+                "security_groups": [
+                    {
+                        "group_id": "sg-0128dd3d8be54b82c",
+                        "group_name": "terraform-20240902063203994500000003"
+                    },
+                    {
+                        "group_id": "sg-069f3c7a4ae9b3587",
+                        "group_name": "terraform-20240902063203980600000002"
+                    }
+                ],
+                "source_dest_check": true,
+                "state": {
+                    "code": 16,
+                    "name": "running"
+                },
+                "state_transition_reason": "",
+                "subnet_id": "subnet-0f1eb85832172b48c",
+                "tags": {
+                    "Name": "k8s-sudarshan-worker02",
+                    "role": "worker"
+                },
+                "usage_operation": "RunInstances",
+                "usage_operation_update_time": "2024-09-02T07:40:23+00:00",
+                "virtualization_type": "hvm",
+                "vpc_id": "vpc-058fbf1eb9e25c0b7"
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "aws_ec2",
+            "role_master",
+            "role_worker",
+            "ungrouped"
+        ]
+    },
+    "aws_ec2": {
+        "hosts": [
+            "13.115.178.123",
+            "43.207.236.164",
+            "52.198.107.241"
+        ]
+    },
+    "role_master": {
+        "hosts": [
+            "43.207.236.164"
+        ]
+    },
+    "role_worker": {
+        "hosts": [
+            "13.115.178.123",
+            "52.198.107.241"
+        ]
+    }
+}

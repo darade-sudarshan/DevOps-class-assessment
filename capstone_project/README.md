@@ -21,6 +21,7 @@ This project involves deploying a modular e-commerce application using AWS servi
 
 ### 1. Set Up AWS EC2 Instances (30 Minutes)
 - Launch three EC2 instances of type `t2.micro` (1 master node, 2 worker nodes) within the free tier.
+<<<<<<< HEAD
 - Configure security groups to allow necessary ports (e.g., 22 for SSH, 80 for HTTP, 443 for HTTPS).
 - SSH into the instances and prepare for Kubernetes installation.
 
@@ -29,16 +30,61 @@ This project involves deploying a modular e-commerce application using AWS servi
 - Upload sample static files to the S3 bucket.
 - Configure bucket policy to allow read access for the application.
 
+=======
+
+![alt text](img/image2.png)
+
+- Configure security groups to allow necessary ports (e.g., 22 for SSH, 80 for HTTP, 443 for HTTPS).
+
+![alt text](img/image3.png)
+
+- SSH into the instances and prepare for Kubernetes installation.
+![alt text](img/image4.png)
+![alt text](img/image5.png)
+![alt text](img/image6.png)
+
+### 2. Create and Configure S3 Bucket (30 Minutes)
+- Create an S3 bucket to store static assets (e.g., product images, stylesheets).
+
+![alt text](img/image7.png)
+
+- Upload sample static files to the S3 bucket.
+
+![alt text](img/image8.png)
+![alt text](img/image9.png)
+
+- Configure bucket policy to allow read access for the application.
+
+![alt text](img/image10.png)
+
+>>>>>>> refs/remotes/origin/main
 ### 3. Set Up Kubernetes Cluster (60 Minutes)
 - **On Master Node:**
   - Install Kubeadm, Kubelet, and Kubectl.
   - Initialize the Kubernetes cluster using Kubeadm.
   - Set up a network plugin (e.g., Calico, Flannel).
+<<<<<<< HEAD
 - **On Worker Nodes:**
   - Join worker nodes to the master node.
 - **Verify Cluster:**
   - Deploy a sample application (e.g., Nginx) to ensure the cluster is functional.
 
+=======
+
+![alt text](img/image11.png)
+
+- **On Worker Nodes:**
+  - Join worker nodes to the master node.
+![alt text](img/image12.png)
+![alt text](img/image13.png)
+![alt text](img/image14.png)
+
+- **Verify Cluster:**
+  - Deploy a sample application (e.g., Nginx) to ensure the cluster is functional.
+
+![alt text](img/image15.png)
+
+>>>>>>> refs/remotes/origin/main
 ### 4. Modularize Infrastructure with Terraform (60 Minutes)
 - **Create Terraform Modules:**
   - **Network Module:** Define VPC, subnets, and security groups.
@@ -49,19 +95,55 @@ This project involves deploying a modular e-commerce application using AWS servi
 - **Initialize and Apply:**
   - Run `terraform init`, `terraform plan`, and `terraform apply` to provision the infrastructure.
 
+<<<<<<< HEAD
 ### 5. Containerize the Application with Docker (60 Minutes)
 - **Dockerfile:** Write Dockerfile for the e-commerce application.
 - **Build Docker Image:** Build Docker images using the Dockerfile.
 - **Push to Registry:** Push Docker images to a Docker registry (e.g., Docker Hub, Amazon ECR).
 
+=======
+![alt text](img/image1.png)
+
+### 5. Containerize the Application with Docker (60 Minutes)
+- **Dockerfile:** Write Dockerfile for the e-commerce application.
+
+[Dockerfile](frontend/Dockerfile)
+
+- **Build Docker Image:** Build Docker images using the Dockerfile.
+
+![alt text](img/image16.png)
+
+- **Push to Registry:** Push Docker images to a Docker registry (e.g., Docker Hub, Amazon ECR).
+
+![alt text](img/image17.png)
+
+>>>>>>> refs/remotes/origin/main
 ### 6. Configure Ansible for Application Deployment (30 Minutes)
 - **Ansible Playbooks:** Write playbooks to configure Kubernetes nodes and deploy the application.
 - **Test Playbooks:** Run Ansible playbooks to ensure correct configuration.
 
+<<<<<<< HEAD
 ### 7. Set Up Jenkins for CI/CD (60 Minutes)
 - **Deploy Jenkins:** Deploy Jenkins on Kubernetes using a Helm chart.
 - **Configure Pipeline:**
   - Create a Groovy pipeline script in Jenkins for CI/CD.
+=======
+![alt text](img/image11.png)
+
+![alt text](img/image12.png)
+
+### 7. Set Up Jenkins for CI/CD (60 Minutes)
+- **Deploy Jenkins:** Deploy Jenkins on Kubernetes using a Helm chart.
+
+![alt text](img/image18.png)
+![alt text](img/image19.png)
+
+- **Configure Pipeline:**
+  - Create a Groovy pipeline script in Jenkins for CI/CD.
+  
+  [Jenkinsfile](Jenkinsfile)
+  
+>>>>>>> refs/remotes/origin/main
   - The pipeline should include stages for:
     - **Source Code Checkout:** Pull code from the Git repository.
     - **Build Docker Image:** Build Docker images from the Dockerfile.

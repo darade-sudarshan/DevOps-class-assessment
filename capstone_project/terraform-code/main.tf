@@ -11,8 +11,13 @@ terraform {
 }
 
 provider "aws" {
+<<<<<<< HEAD
   region  = var.region
   profile = terraform.workspace
+=======
+  region = var.region
+  #profile = terraform.workspace
+>>>>>>> refs/remotes/origin/main
 }
 
 module "ec2" {
@@ -24,7 +29,11 @@ module "ec2" {
   tf_key_pair          = var.tf_key_pair
   public_subnet_id     = module.vpc.ec2_instance_subnet_id
   security_group_id    = [module.vpc.vpc_ec2_sg_id, module.vpc.vpc_ec2_sg_kubernetes_cp_id]
+<<<<<<< HEAD
   iam_ec2_profile_name = module.s3.iam_ec2_profile_name
+=======
+  iam_ec2_profile_name = "ec2-s3-role"
+>>>>>>> refs/remotes/origin/main
   environment          = var.environment
 }
 
@@ -41,10 +50,17 @@ module "vpc" {
   private_subnet_cidr_ip = var.private_subnet_cidr_ip
   public_subnet_cidr_ip  = var.public_subnet_cidr_ip
 }
+<<<<<<< HEAD
 module "iam" {
   source = "./modules/iam"
   ec2_instance_role_name = var.ec2_iam_role_arn
 }
+=======
+# module "iam" {
+#   source                 = "./modules/iam"
+#   ec2_instance_role_name = var.ec2_iam_role_arn
+# }
+>>>>>>> refs/remotes/origin/main
 
 
 # resource "aws_key_pair" "tf_key_pair" {

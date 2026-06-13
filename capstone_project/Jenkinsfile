@@ -4,8 +4,13 @@ pipeline {
         dockerImage = ''
         containerName = 'capstone-webapp-v1'
         dockerHubCredentials = 'docker'
+<<<<<<< HEAD
         kubernetes_server_private_ip="192.168.49.2"
         ansible_server_private_ip="localhost"
+=======
+        kubernetes_server_private_ip="10.0.1.178"
+        //ansible_server_private_ip="localhost"
+>>>>>>> refs/remotes/origin/main
         //KUBECONFIG_CREDENTIALS_ID = 'minikube-config' // Update with your Kubeconfig credentials ID
         MY_KUBECONFIG = credentials('minikube-config')
     }

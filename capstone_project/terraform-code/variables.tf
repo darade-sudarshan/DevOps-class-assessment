@@ -1,6 +1,10 @@
 variable "region" {
+<<<<<<< HEAD
   type    = string
   default = "us-west-2"
+=======
+  type = string
+>>>>>>> refs/remotes/origin/main
 }
 
 # varialbles for EC2 instances
@@ -34,10 +38,17 @@ variable "environment" {
 
 
 # variables for s3
+<<<<<<< HEAD
 variable "iam_ec2_profile_name" {
   description = "iam profile name for ec2"
   type        = string
 }
+=======
+# variable "iam_ec2_profile_name" {
+#   description = "iam profile name for ec2"
+#   type        = string
+# }
+>>>>>>> refs/remotes/origin/main
 
 variable "bucket_name" {
   description = "The name of the S3 bucket"

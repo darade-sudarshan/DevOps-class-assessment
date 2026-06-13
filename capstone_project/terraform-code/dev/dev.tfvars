@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ami                  = "ami-077aa5b3447e8dc64"
 instance_type        = "t2.micro"
 instance_name1        = "k8s-controlplane"
@@ -10,3 +11,18 @@ public_subnet_cidr_ip       = "10.0.1.0/24"
 private_subnet_cidr_ip       = "10.0.2.0/24"
 iam_ec2_profile_name = "ec2_instance_profile"
 environment          = "dev"
+=======
+ami                  = "ami-031ff5a575101728a"
+instance_type        = "t2.medium"
+instance_name1        = "k8s-controlplane"
+instance_name2        = "k8s-workernode"
+bucket_name          = "capstone-sudarshan-project"
+tf_key_pair          = "k8s-sudarshan"
+ec2_iam_role_arn     = "arn:aws:iam::326151034032:role/ec2-s3-role"
+VPC_cidr_ip          = "10.0.0.0/16"
+public_subnet_cidr_ip       = "10.0.1.0/24"
+private_subnet_cidr_ip       = "10.0.2.0/24"
+#iam_ec2_profile_name = "dev_ec2_instance_profile"
+environment          = "dev"
+region               = "ap-northeast-1"
+>>>>>>> refs/remotes/origin/main
